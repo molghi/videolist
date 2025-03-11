@@ -1,0 +1,498 @@
+const page1 = [
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=G7lOxo-1L6E',
+        title: 'Womit päppelst du dich auf? #shorts #easygerman #happiness #learngermanonline',
+        duration: 'PT1M5S',
+        publishedAt: '2025-03-06T10:28:29Z',
+        thumbnail: 'https://i.ytimg.com/vi/G7lOxo-1L6E/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Janusz hat die Menschen in Berlin gefragt: Was macht ihr, wenn ihr nicht so glücklich seid? Yoga zum Entspannen, Musik zum Abschalten, Weinen zum Trost – und ihr? Was hilft euch, um euch besser zu fühlen?',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=_H4MRuUUJs8',
+        title: 'Making Polite Requests in Slow German | Easy German Live',
+        duration: 'PT32M59S',
+        publishedAt: '2025-03-05T18:38:47Z',
+        thumbnail: 'https://i.ytimg.com/vi/_H4MRuUUJs8/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Join Cari & Manuel as they share common ways to ask for things in slow German. 🔤 Subtitles available (press "CC").\r\n---\nLEARN GERMAN WITH US:\n💡 JOIN OUR COMMUNITY: https://www.easygerman.org/membership\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\n\nWATCH MORE:\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\n➕ TIKTOK: https://www.tiktok.com/@easygerman\n➕ OUR WEBSITE: https://www.easygerman.org/\n📱 LEARN GERMAN WITH OUR PARTNER APP: https://www.seedlang.com\n---\nIn diesem Live-Stream erklären euch Cari und Manuel auf langsamem Deutsch, wie man Fragen und Aufforderungen freundlich formuliert und worauf man achten sollte, um nicht unhöflich zu wirken. Dabei vergleichen wir verschiedene Satzstrukturen, zeigen typische Fehler und geben hilfreiche Tipps für den Alltag. Mit praktischen Beispielen, die ihr uns in den Kommentaren geschrieben habt, lernt ihr, wie ihr Bitten noch freundlicher ausdrücken könnt.\n\nIn this live stream, Cari and Manuel explain in slow German how to formulate questions and requests in a friendly way and what you should look out for to avoid coming across as rude. We compare different sentence structures, show typical mistakes and give helpful tips for everyday life. With practical examples that you have written to us in the comments, you will learn how to express requests in an even friendlier way.\n---\nSHOW NOTES\n• https://www.youtube.com/watch?v=s38Ss4uZCuA\n• "Du oder Sie" im Podcast: https://www.easygerman.fm/24\n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1/C2 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Carina Schmid/Manuel Salmann',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=4M9idvFs07o',
+        title: 'Wie hast du früher deine Abende verbracht? #shorts #evening #nightlife #teenage #learngerman',
+        duration: 'PT57S',
+        publishedAt: '2025-03-04T09:41:20Z',
+        thumbnail: 'https://i.ytimg.com/vi/4M9idvFs07o/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Wir haben die Leute in Berlin gefragt, wie sie früher ihre Abende verbracht haben – von heimlich Rauchen über Videospiele bis hin zu Treffen mit Freunden gab es viele verschiedene Antworten. Und ihr? Wie habt ihr eure Abende verbracht, als ihr jünger wart?',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=_fFwfcS_9TY',
+        title: 'How Foreign Kids Learn German Fast | Easy German 596',
+        duration: 'PT18M48S',
+        publishedAt: '2025-03-02T18:00:31Z',
+        thumbnail: 'https://i.ytimg.com/vi/_fFwfcS_9TY/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Become an Easy German member and get interactive exercises for this and all other videos: https://bit.ly/EG_596\n---\nLEARN GERMAN WITH US:\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\n\nWATCH MORE:\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\n➕ TIKTOK: https://www.tiktok.com/@easygerman\n➕ OUR WEBSITE: https://www.easygerman.org/\n📱 LEARN GERMAN WITH OUR PARTNER APP: https://www.seedlang.com\n---\nIn dieser Episode sind wir zu Gast am Immanuel-Kant-Gymnasium in Münster. Dort treffen wir Diana aus der Ukraine und Nikita aus Kasachstan. Die beiden Schüler sind seit zwei Jahren in Deutschland. Wir möchten von ihnen erfahren, wie sie in der neuen Umgebung Deutsch gelernt haben. Außerdem sprechen wir mit ihrer Deutschlehrerin über Tipps & Tricks, die auch euch beim Deutschlernen helfen können.\n\nIn this episode, we are guests at the Immanuel-Kant-Gymnasium in Münster. There we meet Diana from Ukraine and Nikita from Kazakhstan. The two students have been in Germany for two years. We want to find out from them how they have learned German in their new environment. We also talk to their German teacher about tips and tricks that can also help you learn German.\n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O&si=qYOyszYJHJ73_3yZ\nC2 (Near-Native Learners): https://youtube.com/playlist?list=PLk1fjOl39-50hTI9yYPnmTIqL_1zWJI1a&si=cn5GMeQARTmIk1bQ\n---\nOUR SPONSORS:\n📺 Lingopie: 7 days free and up to 73% off if you stay https://lingopie.com/easygerman\n🗣️ italki: Get $10 in credits after your first purchase http://go.italki.com/easygerman\n👩‍🏫 GLS Berlin: No registration fee if you mention "Easy German" https://www.easygerman.org/gls\n🔒 NordVPN: Get our exclusive deal https://nordvpn.com/egp\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Carina Schmid \nCamera: Rawad Sabbagh/Soroush Hashemipanah\nEdit: Rawad Sabbagh\nTranslation: Ben Eve',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=9HG2ZtNgjk4',
+        title: 'Schlittenfahren #short #winter #easygerman #deutschfüranfänger #germana1',
+        duration: 'PT52S',
+        publishedAt: '2025-03-01T09:40:22Z',
+        thumbnail: 'https://i.ytimg.com/vi/9HG2ZtNgjk4/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description: '',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=MqqHc6lRQG4',
+        title: 'Winter in Berlin in Slow German | Super Easy German 273',
+        duration: 'PT13M14S',
+        publishedAt: '2025-02-26T18:00:30Z',
+        thumbnail: 'https://i.ytimg.com/vi/MqqHc6lRQG4/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Become an Easy German member to chat with us, get interactive exercises and keep Janusz motivated to take to the streets! 😄 https://www.easygerman.org/membership \n---\nLEARN GERMAN WITH US:\n💡 JOIN OUR COMMUNITY: https://www.easygerman.org/membership\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\n\nWATCH MORE:\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\n➕ TIKTOK: https://www.tiktok.com/@easygerman\n➕ OUR WEBSITE: https://www.easygerman.org/\n📱 LEARN GERMAN WITH OUR PARTNER APP: https://www.seedlang.com\n---\nIn this episode, we\'re out and about in wintry Berlin - in slow German. We take you to Mauerpark, have a snowball fight, build a snowman and go sledging. You\'ll learn lots of useful vocabulary to talk about winter.\n\nIn dieser Episode sind wir im winterlichen Berlin unterwegs - auf langsamem Deutsch. Wir nehmen euch mit in den Mauerpark, machen eine Schneeballschlacht, bauen einen Schneemann und sind beim Schlittenfahren dabei. Dabei lernt ihr viele nützliche Vokabeln, um über den Winter zu sprechen.\n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O&si=qYOyszYJHJ73_3yZ\nC2 (Near-Native Learners): https://youtube.com/playlist?list=PLk1fjOl39-50hTI9yYPnmTIqL_1zWJI1a&si=cn5GMeQARTmIk1bQ\n---\nOUR SPONSORS:\n📺 Lingopie: 7 days free and up to 73% off if you stay https://lingopie.com/easygerman\n🗣️ italki: Get $10 in credits after your first purchase http://go.italki.com/easygerman\n👩‍🏫 GLS Berlin: No registration fee if you mention "Easy German" https://www.easygerman.org/gls\n🔒 NordVPN: Get our exclusive deal https://nordvpn.com/egp\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Janusz Hamerski/Carina Schmid \nCamera & Edit: Soroush Hashemipanah\nTranslation: Ben Eve',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=Qo_kusD5oQ4',
+        title: 'Münster, What Are You Doing Today? | Easy German 595',
+        duration: 'PT13M43S',
+        publishedAt: '2025-02-23T18:00:26Z',
+        thumbnail: 'https://i.ytimg.com/vi/Qo_kusD5oQ4/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Try Lingopie free for 7 days at https://learn.lingopie.com/easygerman and get 55 % off the annual plan or 73 % off the life-time plan if you decide to stay.\n---\nLEARN GERMAN WITH US:\n💡 JOIN OUR COMMUNITY: https://www.easygerman.org/membership\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\n\nWATCH MORE:\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\n➕ TIKTOK: https://www.tiktok.com/@easygerman\n➕ OUR WEBSITE: https://www.easygerman.org/\n📱 LEARN GERMAN WITH OUR PARTNER APP: https://www.seedlang.com\n---\nLearn German with our street interviews: In this episode, we\'re out and about in our former hometown: Münster! There we talk to people on the street and want to know: How are you spending your day? The answers range from clothes shopping, shopping at the weekly market and studying in the library to activities with friends.\n\nLernt Deutsch mit unseren Straßeninterviews: In dieser Episode sind wir in unserer ehemaligen Heimatstadt unterwegs: Münster! Dort sprechen wir mit Menschen auf der Straße und möchten wissen: Wie gestaltest du deinen Tag? Die Antworten reichen vom Kleider-Shoppen, über den Einkauf auf dem Wochenmarkt und das Lernen in der Bibliothek bis zu Unternehmungen mit Freunden.\n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O&si=qYOyszYJHJ73_3yZ\nC2 (Near-Native Learners): https://youtube.com/playlist?list=PLk1fjOl39-50hTI9yYPnmTIqL_1zWJI1a&si=cn5GMeQARTmIk1bQ\n---\nOUR SPONSORS:\n📺 Lingopie: 7 days free and up to 73% off if you stay https://lingopie.com/easygerman\n🗣️ italki: Get $10 in credits after your first purchase http://go.italki.com/easygerman\n👩‍🏫 GLS Berlin: No registration fee if you mention "Easy German" https://www.easygerman.org/gls\n🔒 NordVPN: Get our exclusive deal https://nordvpn.com/egp\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Janusz Hamerski/Carina Schmid \nCamera & Edit: Rawad Sabbagh\nTranslation: Ben Eve',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=pbtJyg-KIvA',
+        title: 'Ich bin kein … #shorts #interview #germanlanguage',
+        duration: 'PT54S',
+        publishedAt: '2025-02-22T23:59:39Z',
+        thumbnail: 'https://i.ytimg.com/vi/pbtJyg-KIvA/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Janusz hat die Leute auf Berlins Straßen gebeten, spontan den folgenden Satz zu vervollständigen: \nIch bin kein …\nJetzt seid ihr dran! Was seid ihr nicht? Wir sind gespannt auf eure Kommentare! 😃 \n\nDas komplette Video findet ihr hier: https://youtu.be/an232kkTEMk?si=rCnrF1irzceQW3bb',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=dZV2TjhBthE',
+        title: 'German Snacks in Slow German | Super Easy German 272',
+        duration: 'PT17M45S',
+        publishedAt: '2025-02-19T18:00:34Z',
+        thumbnail: 'https://i.ytimg.com/vi/dZV2TjhBthE/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Get our partner app Seedlang and practice more with fun stories and the vocab and gender trainer: https://www.seedlang.com\n--- \nLEARN GERMAN WITH US:\n💡 JOIN OUR COMMUNITY: https://www.easygerman.org/membership\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\n\nWATCH MORE:\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\n➕ TIKTOK: https://www.tiktok.com/@easygerman\n➕ OUR WEBSITE: https://www.easygerman.org/\n---\nIn this episode, Janusz and Cari talk about typical German snacks and test a colorful selection from the supermarket—in slow German. From healthy options like apples and kohlrabi, they quickly move on to classic sweets like Berliners, Knoppers, Milchschnitte, and Haribo. Savory snacks like BiFi, smoked Mettwurst, and salty pretzels are also on the agenda.\n\nIn dieser Episode sprechen Janusz und Cari über typische deutsche Snacks und testen eine bunte Auswahl aus dem Supermarkt - auf langsamem Deutsch. Von gesunden Optionen wie Äpfeln und Kohlrabi geht es schnell zu klassischen Süßigkeiten wie Berlinern, Knoppers, Milchschnitten und Haribo. Auch herzhafte Snacks wie BiFi, geräucherte Mettwurst und salzige Brezeln stehen auf dem Programm.\n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O&si=qYOyszYJHJ73_3yZ\nC2 (Near-Native Learners): https://youtube.com/playlist?list=PLk1fjOl39-50hTI9yYPnmTIqL_1zWJI1a&si=cn5GMeQARTmIk1bQ\n---\nOUR SPONSORS:\n📺 Lingopie: 7 days free and up to 73% off if you stay https://lingopie.com/easygerman\n🗣️ italki: Get $10 in credits after your first purchase http://go.italki.com/easygerman\n👩‍🏫 GLS Berlin: No registration fee if you mention "Easy German" https://www.easygerman.org/gls\n🔒 NordVPN: Get our exclusive deal https://nordvpn.com/egp\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Janusz Hamerski/Carina Schmid \nCamera & Edit: Rawad Sabbagh\nTranslation: Ben Eve',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=3BgJOIy2E5I',
+        title: 'Städte im Pocast #shorts #podcast #deutschonline',
+        duration: 'PT1M11S',
+        publishedAt: '2025-02-18T21:23:14Z',
+        thumbnail: 'https://i.ytimg.com/vi/3BgJOIy2E5I/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Hier kommt schon mal ein kleines Sneak-Peek unserer nächsten Podcast-Episode:🫣\nAm Samstag sprechen Cari, Janusz und Manuel über berühmte Städte, unter anderem über die, wo diese große rote Brücke steht… Wie heißt die nochmal? 🤔\n🎙️ Die ganze Episode gibt es ab Samstag bei Apple Podcasts, Spotify und auf easygerman.fm.',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=sAJLXJ5H0h0',
+        title: 'How Berliners Spend Their Evenings | Easy German 594',
+        duration: 'PT15M24S',
+        publishedAt: '2025-02-16T18:00:42Z',
+        thumbnail: 'https://i.ytimg.com/vi/sAJLXJ5H0h0/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Get the exclusive NordVPN deal here: https://www.nordvpn.com/easygerman. It’s risk-free with Nord’s 30-day money-back guarantee!\n---\nLEARN GERMAN WITH US:\n💡 JOIN OUR COMMUNITY: https://www.easygerman.org/membership\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\n\nWATCH MORE:\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\n➕ TIKTOK: https://www.tiktok.com/@easygerman\n➕ OUR WEBSITE: https://www.easygerman.org/\n📱 LEARN GERMAN WITH OUR PARTNER APP: https://www.seedlang.com\n---\nLearn German with our street interviews: In this episode, we want to know from people on the street what they like to do in the evening. While some like to go clubbing, others like to go to the theater or cinema or make music. But there are also “couch potatoes” who prefer to make themselves comfortable at home. \n\nLernt Deutsch mit unseren Straßeninterviews: In dieser Episode wollen wir von den Menschen auf der Straße wissen, was sie abends gerne machen. Während einige gerne im Club feiern gehen, gehen andere gerne ins Theater oder ins Kino oder machen Musik. Es gibt aber auch "Couchpotatoes", die es sich am liebsten zuhause gemütlich machen. \n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O&si=qYOyszYJHJ73_3yZ\nC2 (Near-Native Learners): https://youtube.com/playlist?list=PLk1fjOl39-50hTI9yYPnmTIqL_1zWJI1a&si=cn5GMeQARTmIk1bQ\n---\nOUR SPONSORS:\n📺 Lingopie: 7 days free and up to 73% off if you stay https://lingopie.com/easygerman\n🗣️ italki: Get $10 in credits after your first purchase http://go.italki.com/easygerman\n👩‍🏫 GLS Berlin: No registration fee if you mention "Easy German" https://www.easygerman.org/gls\n🔒 NordVPN: Get our exclusive deal https://nordvpn.com/egp\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Janusz Hamerski/Carina Schmid \nCamera & Edit: Soroush Hashemipanah\nTranslation: Ben Eve',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=koQ1aOGd4J8',
+        title: 'Ich war noch nie… #shorts  #language #learngerman #studygerman',
+        duration: 'PT59S',
+        publishedAt: '2025-02-12T14:05:00Z',
+        thumbnail: 'https://i.ytimg.com/vi/koQ1aOGd4J8/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Janusz hat gefragt: „Ich war noch nie…“ – und die meisten haben mit Ländern geantwortet, die sie noch nie besucht haben. Aber es gab auch ein paar überraschende Antworten! Jetzt seid ihr dran: Wie würdet ihr den Satz vervollständigen?',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=9ZTtTVed_mg',
+        title: 'Geschenke in Deutschland #shorts #easygerman #easygermanpodcast #gifts #love',
+        duration: 'PT1M12S',
+        publishedAt: '2025-02-11T10:17:12Z',
+        thumbnail: 'https://i.ytimg.com/vi/9ZTtTVed_mg/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Cari und Manuel sprechen in der neuen Podcast-Episode darüber, wie Deutsche ihre Liebe zeigen. Und in eurem Land? Zeigt man Liebe eher mit Worten, Geschenken oder Taten? Die ganze Episode findet ihr im Easy German Podcast → auf easygerman.fm und in allen Podcast-Apps.',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=W1vmJMk8UDU',
+        title: 'Ich habe immer wieder…#shorts #deutschlernen #learngerman #sprache',
+        duration: 'PT46S',
+        publishedAt: '2025-02-10T17:17:05Z',
+        thumbnail: 'https://i.ytimg.com/vi/W1vmJMk8UDU/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            '„Ich habe immer wieder…“ – das haben wir die Menschen auf der Straße gefragt. Und jetzt seid ihr dran: Wie würdet ihr den Satz vervollständigen? Schreibt es in die Kommentare!',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=0DLBdbv1f6A',
+        title: 'What Would Berliners Change About Themselves? | Easy German 593',
+        duration: 'PT14M20S',
+        publishedAt: '2025-02-09T18:00:00Z',
+        thumbnail: 'https://i.ytimg.com/vi/0DLBdbv1f6A/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Thanks to our sponsor italki! Try italki now and get $10 in italki credits after taking your first 1-on-1 lesson: http://go.italki.com/easygerman\n---\nLEARN GERMAN WITH US:\n💡 JOIN OUR COMMUNITY: https://www.easygerman.org/membership\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\n\nWATCH MORE:\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\n➕ TIKTOK: https://www.tiktok.com/@easygerman\n➕ OUR WEBSITE: https://www.easygerman.org/\n📱 LEARN GERMAN WITH OUR PARTNER APP: https://www.seedlang.com\n---\nLearn German with our street interviews: In this episode, we ask people on the street what they would like to change about themselves. One would like to be more punctual, another more patient and many would like to be younger again. We would also like to know whether and how such personal goals can be achieved.\n\nLernt Deutsch mit unseren Straßeninterviews: In dieser Episode fragen wir die Leute auf der Straße, was sie an sich verändern möchten. Einer würde gerne pünktlicher sein, ein anderer geduldiger und viele wären gerne wieder jünger. Ob und wie sich solche persönlichen Ziele erreichen lassen, möchten wir ebenfalls wissen.\n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O&si=qYOyszYJHJ73_3yZ\nC2 (Near-Native Learners): https://youtube.com/playlist?list=PLk1fjOl39-50hTI9yYPnmTIqL_1zWJI1a&si=cn5GMeQARTmIk1bQ\n---\nOUR SPONSORS:\n📺 Lingopie: 7 days free and up to 73% off if you stay https://lingopie.com/easygerman\n🗣️ italki: Get $10 in credits after your first purchase http://go.italki.com/easygerman\n👩‍🏫 GLS Berlin: No registration fee if you mention "Easy German" https://www.easygerman.org/gls\n🔒 NordVPN: Get our exclusive deal https://nordvpn.com/egp\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Janusz Hamerski/Carina Schmid \nCamera: Soroush Hashemipanah\nEdit: Rawad Sabbagh\nTranslation: Ben Eve',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=23tR_1kQh3E',
+        title: 'Janusz im eleganten Look #shorts #wardrobe #fashion #germana1 #slowgerman',
+        duration: 'PT1M',
+        publishedAt: '2025-02-08T10:46:48Z',
+        thumbnail: 'https://i.ytimg.com/vi/23tR_1kQh3E/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Heute präsentiert euch Janusz seinen eleganten Look – dabei lernt ihr die Namen vieler verschiedener Kleidungsstücke. Was tragt ihr am liebsten? Mögt ihr es, euch schick zu machen?',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=1bFgK6wtuNY',
+        title: 'At the Bakery in Slow German | Super Easy German 271',
+        duration: 'PT14M47S',
+        publishedAt: '2025-02-05T18:00:01Z',
+        thumbnail: 'https://i.ytimg.com/vi/1bFgK6wtuNY/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Become an Easy German Member to join our Discord server, get interactive worksheets and more: https://www.easygerman.org/membership\n---\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\n\nWATCH MORE:\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\n➕ TIKTOK: https://www.tiktok.com/@easygerman\n➕ OUR WEBSITE: https://www.easygerman.org/\n📱 LEARN GERMAN WITH OUR PARTNER APP: https://www.seedlang.com\n---\nDanke an das Schokochino für den Videodreh! Wenn ihr mal vorbeischauen wollt - ihr findet die Bäckerei hier: https://maps.app.goo.gl/KJmc4FWyTbGZJVZM7\n---\nIn this episode we show you a Berlin bakery - in slow German. You\'ll see how to order breakfast in German and what types of pastries are there. You\'ll learn lots of useful phrases and vocabulary for your next visit to the bakery.\n\nIn dieser Episode zeigen wir euch eine Berliner Bäckerei - auf langsamem Deutsch. Ihr seht, wie man auf Deutsch Frühstück bestellt und welche Arten von Gebäck es gibt. Dabei lernt ihr viele nützliche Phrasen und Vokabeln für euren nächsten Bäckereibesuch.\n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O&si=qYOyszYJHJ73_3yZ\nC2 (Near-Native Learners): https://youtube.com/playlist?list=PLk1fjOl39-50hTI9yYPnmTIqL_1zWJI1a&si=cn5GMeQARTmIk1bQ\n---\nOUR SPONSORS:\n📺 Lingopie: 7 days free and up to 73% off if you stay https://lingopie.com/easygerman\n🗣️ italki: Get $10 in credits after your first purchase http://go.italki.com/easygerman\n👩‍🏫 GLS Berlin: No registration fee if you mention "Easy German" https://www.easygerman.org/gls\n🔒 NordVPN: Get our exclusive deal https://nordvpn.com/egp\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Janusz Hamerski/Carina Schmid \nCamera: Rawad Sabbagh\nEdit: Mitch Hargreaves\nTranslation: Ben Eve',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=G-WTBhyoK7o',
+        title: 'Small Things That Make Germans Happy | Easy German 592',
+        duration: 'PT14M41S',
+        publishedAt: '2025-02-02T18:00:11Z',
+        thumbnail: 'https://i.ytimg.com/vi/G-WTBhyoK7o/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'LEARN GERMAN WITH US:\n💡 JOIN OUR COMMUNITY: https://www.easygerman.org/membership\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\n\nWATCH MORE:\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\n➕ TIKTOK: https://www.tiktok.com/@easygerman\n➕ OUR WEBSITE: https://www.easygerman.org/\n📱 LEARN GERMAN WITH OUR PARTNER APP: https://www.seedlang.com\n---\nLearn German with our street interviews: In this episode, we find out from the people on Berlin\'s streets what little things make them happy in their everyday lives. From cappuccino and letter writing to birdwatching - the answers are varied.\n\nLernt Deutsch mit unseren Straßeninterviews: In dieser Episode erfahren wir von den Menschen auf Berlins Straßen, welche kleinen Dinge sie im Alltag glücklich machen. Vom Cappuccino über das Briefeschreiben bis zur Vogelbeobachtung - die Antworten sind vielfältig. \n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O&si=qYOyszYJHJ73_3yZ\nC2 (Near-Native Learners): https://youtube.com/playlist?list=PLk1fjOl39-50hTI9yYPnmTIqL_1zWJI1a&si=cn5GMeQARTmIk1bQ\n---\nOUR SPONSORS:\n📺 Lingopie: 7 days free and up to 73% off if you stay https://lingopie.com/easygerman\n🗣️ italki: Get $10 in credits after your first purchase http://go.italki.com/easygerman\n👩‍🏫 GLS Berlin: No registration fee if you mention "Easy German" https://www.easygerman.org/gls\n🔒 NordVPN: Get our exclusive deal https://nordvpn.com/egp\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Janusz Hamerski/Carina Schmid \nCamera & Edit: Chris Thornberry\nTranslation: Ben Eve',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=o0o_Vn_Dp3s',
+        title: 'Streuselbrötchen #shorts #podcast #bäckerei',
+        duration: 'PT1M26S',
+        publishedAt: '2025-02-01T13:04:44Z',
+        thumbnail: 'https://i.ytimg.com/vi/o0o_Vn_Dp3s/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Kennt ihr Streuselbrötchen? Unsere Esthi ist heute im Podcast dabei und hat welche mitgebracht - denn heute ist der Tag des Streuselbrötchens! 🥳\n🎙️ Die ganze Episode findet ihr in allen Podcast-Apps und auf easygerman.fm.',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=fjRGdzAbuSU',
+        title: 'Morgenroutine #shorts #morningroutine #learngerman',
+        duration: 'PT1M',
+        publishedAt: '2025-01-31T14:53:37Z',
+        thumbnail: 'https://i.ytimg.com/vi/fjRGdzAbuSU/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Mathias nimmt euch heute mit und zeigt euch seine Morgenroutine! 🧭 Was ist eure Routine morgens? ☺️ #morningroutine #morgenroutine #studygerman #deutschlernen',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=pg3XuQPOQh0',
+        title: 'Ich habe noch nie … #shorts #lerndeutsch #deutsch',
+        duration: 'PT45S',
+        publishedAt: '2025-01-30T13:26:02Z',
+        thumbnail: 'https://i.ytimg.com/vi/pg3XuQPOQh0/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            '„Ich habe noch nie…“\nDiesen Satz sollten die Leute auf Berlins Straßen vervollständigen. Schaut mal rein und erzählt uns in den Kommentaren: Was habt ihr noch nie gemacht?\n\nDas ganze Video findet ihr hier: https://youtu.be/VTN-Qys9fCA?si=vuYsT1kFYmO9GTgp',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=IfGsUjRoc3Q',
+        title: 'Ausdruck der Woche #shorts #easygerman #easygermanpodcast #podcast',
+        duration: 'PT57S',
+        publishedAt: '2025-01-28T12:39:31Z',
+        thumbnail: 'https://i.ytimg.com/vi/IfGsUjRoc3Q/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Der Ausdruck der Woche ist „suchten“! Das Wort kommt von „Sucht“ und beschreibt, dass man etwas ununterbrochen und fast wie süchtig macht.\nDie ganze Episode findet ihr im Easy German Podcast → auf easygerman.fm und in allen Podcast-Apps.\nWas suchtet ihr zur Zeit? Schreibt es uns in die Kommentare.',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=lGOXIJ0ShWA',
+        title: 'Wäsche waschen #shorts #deutschfüranfänger #germana1 #washing',
+        duration: 'PT1M',
+        publishedAt: '2025-01-27T10:08:07Z',
+        thumbnail: 'https://i.ytimg.com/vi/lGOXIJ0ShWA/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description: '',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=an232kkTEMk',
+        title: '102 Real Life Sentences With the Verb “Sein” | Easy German 591',
+        duration: 'PT11M57S',
+        publishedAt: '2025-01-26T18:00:03Z',
+        thumbnail: 'https://i.ytimg.com/vi/an232kkTEMk/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Try Lingopie free for 7 days at https://learn.lingopie.com/easygerman and get 55 % off the annual plan or 73 % off the life-time plan if you decide to stay.\n---\nLEARN GERMAN WITH US:\n💡 JOIN OUR COMMUNITY: https://www.easygerman.org/membership\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\n\nWATCH MORE:\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\n➕ TIKTOK: https://www.tiktok.com/@easygerman\n➕ OUR WEBSITE: https://www.easygerman.org/\n📱 LEARN GERMAN WITH OUR PARTNER APP: https://www.seedlang.com\n---\nLearn German with our street interviews: After showing you sentences with ‘haben’ in one of the last episodes, today we\'re doing the same format with ‘sein’. We ask people on the street in Berlin to complete sentence beginnings with ‘sein’ so that you can better memorise the different grammatical forms of the verb: Ich bin, ich war, ich wäre gern…\n\nLernt Deutsch mit unseren Straßeninterviews: Nachdem wir euch in einer der letzten Episode Sätze mit “haben” gezeigt haben, machen wir heute dasselbe Format mit “sein”. Wir bitten Menschen auf der Straße in Berlin, Satzanfänge mit “sein” zu vervollständigen, sodass ihr euch die verschiedenen grammatischen Formen des Verbs besser merken könnt: Ich bin, ich war, ich wäre gern…\n---\nCHAPTERS:\n00:00 Intro\n00:44 Ich bin...\n01:37 Ich bin nicht...\n02:43 Ich bin kein...\n03:56 Midroll: Lingopie\n04:53 Ich war...\n06:23 Ich war noch nie...\n07:57 Ich wäre gern...\n09:51 Ich werde ... sein\n11:05 Outro\n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O&si=qYOyszYJHJ73_3yZ\nC2 (Near-Native Learners): https://youtube.com/playlist?list=PLk1fjOl39-50hTI9yYPnmTIqL_1zWJI1a&si=cn5GMeQARTmIk1bQ\n---\nOUR SPONSORS:\n📺 Lingopie: 7 days free and up to 73% off if you stay https://lingopie.com/easygerman\n🗣️ italki: Get $10 in credits after your first purchase http://go.italki.com/easygerman\n👩‍🏫 GLS Berlin: No registration fee if you mention "Easy German" https://www.easygerman.org/gls\n🔒 NordVPN: Get our exclusive deal https://nordvpn.com/egp\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Janusz Hamerski/Carina Schmid \nCamera: Soroush Hashemipanah\nEdit: Mitch Hargreaves\nTranslation: Ben Eve',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=zJEAJ9kei4w',
+        title: 'Ich habe kein…#shorts #deutschlernen #deutschunterricht #german #interview',
+        duration: 'PT42S',
+        publishedAt: '2025-01-23T10:04:13Z',
+        thumbnail: 'https://i.ytimg.com/vi/zJEAJ9kei4w/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description: '',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=XiBt9Nm0PHU',
+        title: 'Clothing Vocabulary in Slow German | Super Easy German 270',
+        duration: 'PT16M15S',
+        publishedAt: '2025-01-22T18:00:23Z',
+        thumbnail: 'https://i.ytimg.com/vi/XiBt9Nm0PHU/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Learn German vocabulary effectively with the proven Spaced Repetition method on our partner app Seeldang: https://www.seedlang.com\n---\nLEARN GERMAN WITH US:\n💡 JOIN OUR COMMUNITY: https://www.easygerman.org/membership\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\n\nWATCH MORE:\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\n➕ TIKTOK: https://www.tiktok.com/@easygerman\n➕ OUR WEBSITE: https://www.easygerman.org/\n---\nIn this episode, we show you our wardrobe, in slow German. ChatGPT helps us with this: we ask the AI for different clothing styles. And Janusz then dresses like this. You will learn the names of many different items of clothing, from a formal suit to a relaxed at-home look.\n\nIn dieser Episode zeigen wir euch unseren Kleiderschrank, und zwar auf langsamem Deutsch. Dabei hilft uns ChatGPT: Wir fragen die KI nach verschiedenen Kleidungsstilen. Und Janusz zieht sich dann so an. Dabei lernt ihr die Bezeichnung vieler verschiedener Kleidungsstücke, vom formellen Anzug bis zum entspannten Zuhause-Look.\n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O&si=qYOyszYJHJ73_3yZ\nC2 (Near-Native Learners): https://youtube.com/playlist?list=PLk1fjOl39-50hTI9yYPnmTIqL_1zWJI1a&si=cn5GMeQARTmIk1bQ\n---\nOUR SPONSORS:\n📺 Lingopie: 7 days free and up to 73% off if you stay https://lingopie.com/easygerman\n🗣️ italki: Get $10 in credits after your first purchase http://go.italki.com/easygerman\n👩‍🏫 GLS Berlin: No registration fee if you mention "Easy German" https://www.easygerman.org/gls\n🔒 NordVPN: Get our exclusive deal https://nordvpn.com/egp\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Janusz Hamerski/Carina Schmid \nCamera & Edit: Rawad Sabbagh\nTranslation: Ben Eve',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=f-h8daXzlvk',
+        title: 'Kulturelle Unterschiede #shorts #cultureshock #germany #restaurant #bill',
+        duration: 'PT1M7S',
+        publishedAt: '2025-01-21T10:59:55Z',
+        thumbnail: 'https://i.ytimg.com/vi/f-h8daXzlvk/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description: '',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=hj3w5aaC6u0',
+        title: 'Beim Friseur #shorts #deutschfüranfänger #germana1 #hairdresser',
+        duration: 'PT45S',
+        publishedAt: '2025-01-20T10:36:44Z',
+        thumbnail: 'https://i.ytimg.com/vi/hj3w5aaC6u0/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Heute geht es mit Mathias zum Friseur. Er geht gerne zum Friseur und lässt sich die Seiten kurz schneiden. Wie ist es bei euch? Geht ihr gerne zum Friseur?',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=RkDBbpzMXpo',
+        title: 'Which Countries Do Germans (Dis)Like Most?  Easy German 590',
+        duration: 'PT14M40S',
+        publishedAt: '2025-01-19T18:00:16Z',
+        thumbnail: 'https://i.ytimg.com/vi/RkDBbpzMXpo/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Thanks to our partner GLS Sprachenzentrum! Find out more about their German courses in Berlin at https://www.easygerman.org/gls and select "Easy German" when being asked how you found them in order to save the registration fee of 30 Euro!\n---\nLEARN GERMAN WITH US:\n💡 JOIN OUR COMMUNITY: https://www.easygerman.org/membership\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\n\nWATCH MORE:\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\n➕ TIKTOK: https://www.tiktok.com/@easygerman\n➕ OUR WEBSITE: https://www.easygerman.org/\n📱 LEARN GERMAN WITH OUR PARTNER APP: https://www.seedlang.com\n---\nLearn German with our street interviews: In this episode, we are back on the streets of Berlin with the participants of the Easy German Winter School 2024. We want to know from the people on the street which countries they have already visited, which countries they particularly liked and where they had less favourable experiences.\n\nLernt Deutsch mit unseren Straßeninterviews: In dieser Episode sind wir wieder auf den Straßen Berlins unterwegs, und zwar mit den Teilnehmenden der Easy German Winter School 2024. Wir möchten von den Menschen auf der Straße wissen, welche Länder sie bereits besucht haben, welche Länder ihnen besonders gut gefallen haben und wo sie weniger gute Erfahrungen hatten.\n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O&si=qYOyszYJHJ73_3yZ\nC2 (Near-Native Learners): https://youtube.com/playlist?list=PLk1fjOl39-50hTI9yYPnmTIqL_1zWJI1a&si=cn5GMeQARTmIk1bQ\n---\nOUR SPONSORS:\n📺 Lingopie: 7 days free and up to 73% off if you stay https://lingopie.com/easygerman\n🗣️ italki: Get $10 in credits after your first purchase http://go.italki.com/easygerman\n👩‍🏫 GLS Berlin: No registration fee if you mention "Easy German" https://www.easygerman.org/gls\n🔒 NordVPN: Get our exclusive deal https://nordvpn.com/egp\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Janusz Hamerski/Carina Schmid \nCamera: Chris Thornberry/Rawad Sabbagh/Carina Schmid\nEdit: Chris Thornberry/Rawad Sabbagh\nTranslation: Ben Eve',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=PG3NqVmhznM',
+        title: 'Wasserkocher #shorts #podcast #languagelearning',
+        duration: 'PT41S',
+        publishedAt: '2025-01-18T18:27:44Z',
+        thumbnail: 'https://i.ytimg.com/vi/PG3NqVmhznM/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Habt ihr einen Wasserkocher? Cari und Manuel unterhalten sich im heutigen Podcast darüber, ob dieses Gerät ein Top oder Flop ist. \nWir freuen uns auf eure Kommentare!👇\n🎙️ Den Podcast findet ihr bei Apple Podcasts, Spotify und auf easygerman.fm.',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=18CBczwqARs',
+        title: 'A Day in my Life in Slow German | Super Easy German 269',
+        duration: 'PT11M17S',
+        publishedAt: '2025-01-15T18:00:02Z',
+        thumbnail: 'https://i.ytimg.com/vi/18CBczwqARs/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'LEARN GERMAN WITH US:\n💡 JOIN OUR COMMUNITY: https://www.easygerman.org/membership\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\n\nWATCH MORE:\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\n➕ TIKTOK: https://www.tiktok.com/@easygerman\n➕ OUR WEBSITE: https://www.easygerman.org/\n📱 LEARN GERMAN WITH OUR PARTNER APP: https://www.seedlang.com\n---\nIn this episode, you accompany Mathias on a typical day in Vienna - in slow German. You go with Mathias to the bakery, to work, to the hairdresser and to other places. You\'ll also join Mathias while goes jogging along the Danube. You\'ll learn lots of useful vocabulary along the way. \n\nIn dieser Episode begleitet ihr Mathias an einem typischen Tag in Wien - auf langsamem Deutsch. Ihr geht mit Mathias zum Bäcker, zur Arbeit, zum Friseur und zu anderen Orten. Außerdem seid ihr auch dabei, wenn Mathias seine Jogging-Runden an der Donau dreht. Dabei lernt ihr viele nützliche Vokabeln. \n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O&si=qYOyszYJHJ73_3yZ\nC2 (Near-Native Learners): https://youtube.com/playlist?list=PLk1fjOl39-50hTI9yYPnmTIqL_1zWJI1a&si=cn5GMeQARTmIk1bQ\n---\nOUR SPONSORS:\n📺 Lingopie: 7 days free and up to 73% off if you stay https://lingopie.com/easygerman\n🗣️ italki: Get $10 in credits after your first purchase http://go.italki.com/easygerman\n👩‍🏫 GLS Berlin: No registration fee if you mention "Easy German" https://www.easygerman.org/gls\n🔒 NordVPN: Get our exclusive deal https://nordvpn.com/egp\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Mathias Haas\nCamera & Edit: Kirill Lialin\nTranslation: Ben Eve',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=VTN-Qys9fCA',
+        title: '100 Real Life Sentences with the Verb “haben” | Easy German 589',
+        duration: 'PT13M8S',
+        publishedAt: '2025-01-12T18:00:31Z',
+        thumbnail: 'https://i.ytimg.com/vi/VTN-Qys9fCA/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            "🎆 Commit to your New Year's resolution with the Lingoda Flex. Get 10% discount and up to 45 free private classes when you sign up today with our code EASYGERMAN2025 - https://try.lingoda.com/EasyGerman2025 [Ad]\n---\nLEARN GERMAN WITH US:\n💡 JOIN OUR COMMUNITY: https://www.easygerman.org/membership\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\n\nWATCH MORE:\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\n➕ TIKTOK: https://www.tiktok.com/@easygerman\n➕ OUR WEBSITE: https://www.easygerman.org/\n📱 LEARN GERMAN WITH OUR PARTNER APP: https://www.seedlang.com\n---\n‘Haben’ is one of the most important verbs in German. As an auxiliary verb, you probably already know it from sentences about the past: ‘I made a new video today.’ Or you've come across ‘haben’ in sentences like ‘Ich habe ein Auto’. Because ‘haben’ is used so often, I thought I'd go out on the street and ask people to complete sentences with the verb ‘haben’ so that you can better memorise the conjugations.\n\n“Haben” ist eins der wichtigsten Verben im Deutschen. Als Hilfsverb kennt ihr es bestimmt schon aus Sätzen über die Vergangenheit: “Ich habe heute ein neues Video gedreht.” Oder ihr habt “haben” in Sätzen wie “Ich habe ein Auto” kennengelernt. Weil “haben” so oft benutzt wird, dachte ich mir: Ich gehe auf die Straße und bitte Menschen, Sätze mit dem Verb “haben” zu vervollständigen, damit ihr euch die Konjugation besser merken könnt.\n---\nCHAPTERS:\n00:00 Intro\n00:39 Ich habe...\n01:27 Ich habe kein...\n02:53 Ich habe noch nie...\n04:30 Ich hatte...\n06:08 Midroll: Lingoda\n07:37 Ich hätte gerne...\n08:45 Ich habe immer wieder...\n10:15 Ich werde ... haben.\n12:00 Outro\n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O&si=qYOyszYJHJ73_3yZ\nC2 (Near-Native Learners): https://youtube.com/playlist?list=PLk1fjOl39-50hTI9yYPnmTIqL_1zWJI1a&si=cn5GMeQARTmIk1bQ\n---\nOUR SPONSORS:\n📺 Lingopie: 7 days free and up to 73% off if you stay https://lingopie.com/easygerman\n🗣️ italki: Get $10 in credits after your first purchase http://go.italki.com/easygerman\n👩‍🏫 GLS Berlin: No registration fee if you mention \"Easy German\" https://www.easygerman.org/gls\n🔒 NordVPN: Get our exclusive deal https://nordvpn.com/egp\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Janusz Hamerski/Carina Schmid \nCamera & Edit: Soroush Hashemipanah\nTranslation: Ben Eve",
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=7vDCNu_ng4Q',
+        title: 'Auslandsaufenthalte #shorts #exchange #germanonline',
+        duration: 'PT53S',
+        publishedAt: '2025-01-10T19:49:50Z',
+        thumbnail: 'https://i.ytimg.com/vi/7vDCNu_ng4Q/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Heute fragt Janusz Studierende und Lehrende an der Universität Santa Barbara, wo und wie lange sie sich für einen Studierendenaustausch im Ausland aufgehalten haben. \nWarst du schon mal länger im Ausland als nur für einen kurzen Urlaub? Was hast du dort gemacht? \n\nDas Video in voller Länge findest du hier: https://youtu.be/s4R8XtZXYSM?si=Dn0kZNolPGdNmcnH',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=NpB1ISHiSN0',
+        title: 'Prostata! #shorts #prostata  #deutschland',
+        duration: 'PT1M7S',
+        publishedAt: '2025-01-09T12:37:27Z',
+        thumbnail: 'https://i.ytimg.com/vi/NpB1ISHiSN0/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Mittagspause für Cari und Janusz - und zwar auf langsamem Deutsch. Heute nehmen sie euch mit in ihr Lieblingsrestaurant und erzählen euch von Getränken, Büchern, Witzen und dummen deutschen Sprüchen. 🤡\nWelche Sprüche kennt ihr noch? Schreibt sie uns in die Kommentare! \n\nDas ganze Video findet ihr hier: https://youtu.be/qYtsk5yH_nw?si=XXNlkXDtIiBGE8hv',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=uxNI9gUX0s0',
+        title: '30 Minutes of Encouragement in Slow German | Easy German Live',
+        duration: 'PT37M48S',
+        publishedAt: '2025-01-08T18:43:38Z',
+        thumbnail: 'https://i.ytimg.com/vi/uxNI9gUX0s0/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Cari, Manuel and guests talk about New Years Resolutions and share words of encouragement in slow German. 🔤 Subtitles available (press "CC").\r\n---\r\nLEARN GERMAN WITH US:\r\n💡 JOIN OUR COMMUNITY: https://www.easygerman.org/membership\r\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\r\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\r\n\r\nWATCH MORE:\r\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\r\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\r\n➕ TIKTOK: https://www.tiktok.com/@easygerman\r\n➕ OUR WEBSITE: https://www.easygerman.org/\r\n📱 LEARN GERMAN WITH OUR PARTNER APP: https://www.seedlang.com\r\n\r\n---\n\nIm ersten Live-Stream des Jahres Cari und Manuel mit euch über eure Pläne für 2025. Ihr bekommt Motivation mit Ausdrücken wie „Du schaffst das!“ und „Halte durch!“. Eure Kommentare zu Plänen wie Deutsch lernen, Sport machen oder Reisen werden live beantwortet. Außerdem rufen wir Gäste an: Klaus, Mathias und Janusz teilen ihre Ziele und Vorhaben für das neue Jahr. Es gibt Vokabeln, Motivation und viele lustige Momente.\n\nIn the first live stream of the year, Cari and Manuel talk with you about your plans for 2025. You’ll get motivation with phrases like “You can do it!” and “Hang in there!” Your comments about goals like learning German, exercising, or travelling are answered live. Plus, they call guests: Klaus, Mathias, and Janusz share their goals and plans for the new year. The stream is full of vocabulary, motivation, and plenty of funny moments.\n\n---\r\nALL OUR VIDEOS SORTED BY LEVEL\r\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\r\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\r\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\r\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\r\nC1/C2 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O\r\n---\r\nPRODUCED BY:\r\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\r\nhttp://www.easy-languages.org\r\n---\r\nHosts of this episode: Carina Schmid/Manuel Salmann',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=VGFjoJA4K7c',
+        title: 'Talent #shorts #languagelearning #deutsch',
+        duration: 'PT44S',
+        publishedAt: '2025-01-07T19:58:59Z',
+        thumbnail: 'https://i.ytimg.com/vi/VGFjoJA4K7c/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Beim Sprachenlernen spielen viele Faktoren eine Rolle, die uns das Lernen erschweren oder erleichtern können. Zeit, Motivation, die eigene Muttersprache… und vielleicht auch Talent? Diese Frage hat uns Anna, Deutschlehrerin beim Foreign Institute in Washington, D.C. beantwortet.\nHabt ihr ein Talent zum Sprachenlernen? 🤓\n\nThanks to the team at the Foreign Service Institute and the U.S. State Department. The U.S. State Department does not endorse Easy German or its sponsors.',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=BdcL8azN8Zg',
+        title: 'Wie hat dein Auslandsaufenthalt dich verändert? #shorts #exchange #university #germanonline',
+        duration: 'PT56S',
+        publishedAt: '2025-01-06T10:27:55Z',
+        thumbnail: 'https://i.ytimg.com/vi/BdcL8azN8Zg/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description: '',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=Xb0tOAyvQds',
+        title: 'What Berliners Love and Hate About Their City | Easy German 588',
+        duration: 'PT11M32S',
+        publishedAt: '2025-01-05T18:00:20Z',
+        thumbnail: 'https://i.ytimg.com/vi/Xb0tOAyvQds/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            '📱 Learn more German vocab, grammar and more with our partner app Seedlang: https://www.seedlang.com\n---\nLEARN GERMAN WITH US:\n💡 JOIN OUR COMMUNITY: https://www.easygerman.org/membership\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\n\nWATCH MORE:\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\n➕ TIKTOK: https://www.tiktok.com/@easygerman\n➕ OUR WEBSITE: https://www.easygerman.org/\n---\nLearn German with our street interviews: We filmed this episode with the participants of the Easy German Winter School. We wanted to find out from Berliners what annoys them about their own city. Public transport, noise, high rents... People mentioned many things. We also found out whether the city also has some nice sides!\n\nLernt Deutsch mit unseren Straßeninterviews: Diese Episode haben wir mit den Teilnehmenden der Easy German Winter School gedreht. Wir wollten von den Berlinerinnen und Berlinern wissen, was sie an ihrer eigenen Stadt nervt. Nahverkehr, Lärm, hohe Mieten… Es ist einiges zusammengekommen. Ob die Stadt auch schöne Seiten hat, finden wir ebenfalls heraus! \n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O&si=qYOyszYJHJ73_3yZ\nC2 (Near-Native Learners): https://youtube.com/playlist?list=PLk1fjOl39-50hTI9yYPnmTIqL_1zWJI1a&si=cn5GMeQARTmIk1bQ\n---\nOUR SPONSORS:\n📺 Lingopie: 7 days free and up to 73% off if you stay https://lingopie.com/easygerman\n🗣️ italki: Get $10 in credits after your first purchase http://go.italki.com/easygerman\n👩‍🏫 GLS Berlin: No registration fee if you mention "Easy German" https://www.easygerman.org/gls\n🔒 NordVPN: Get our exclusive deal https://nordvpn.com/egp\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Janusz Hamerski/Carina Schmid \nCamera: Chris Thornberry/Rawad Sabbagh/Carina Schmid\nEdit: Chris Thornberry\nTranslation: Ben Eve',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=BWxXPyhXkOo',
+        title: 'Wie war Kindheit damals im Vergleich zu heute? #shorts #childhood #kindheit #learngerman',
+        duration: 'PT1M',
+        publishedAt: '2025-01-03T18:16:32Z',
+        thumbnail: 'https://i.ytimg.com/vi/BWxXPyhXkOo/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description: '',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=zIgmxcjbFDM',
+        title: 'Ist Sprachenlernen schwierig für Erwachsene? #shorts #learngerman #diplomats',
+        duration: 'PT47S',
+        publishedAt: '2025-01-02T10:55:23Z',
+        thumbnail: 'https://i.ytimg.com/vi/zIgmxcjbFDM/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Thanks to the team at the Foreign Service Institute and the U.S. State Department. The U.S. State Department does not endorse Easy German or its sponsors.',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=I0iYGvnCDDI',
+        title: '5 Reasons Not to Learn German in 2025 | Easy German 587',
+        duration: 'PT10M27S',
+        publishedAt: '2024-12-29T18:00:11Z',
+        thumbnail: 'https://i.ytimg.com/vi/I0iYGvnCDDI/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Boost your German with our 30 Day German Challenge in January 😃 👇\nhttps://www.easygerman.org/30daychallenge\n\nLEARN MORE GERMAN WITH US:\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\n\nWATCH MORE:\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\n➕ TIKTOK: https://www.tiktok.com/@easygerman\n➕ OUR WEBSITE: https://www.easygerman.org/\n📱 LEARN GERMAN WITH OUR PARTNER APP: https://www.seedlang.com\n---\nGerman is difficult, Germans are unfriendly, you get by with English in Germany... There are many reasons not to learn German. At the end of the year, we\'ll show you five good reasons why you shouldn\'t learn German in 2025. And at the same time, we hope that we are not discouraging you from learning German but, on the contrary, motivating you to learn German!\n\nDeutsch ist schwierig, Deutsche sind unfreundlich, Englisch reicht in Deutschland vollkommen aus… Es gibt viele Gründe, aufs Deutschlernen zu verzichten. Zum Jahresende zeigen wir euch fünf gute Gründe, warum ihr 2025 kein Deutsch lernen solltet. Und gleichzeitig hoffen wir, dass wir euch damit nicht vom Deutschlernen abhalten, sondern, im Gegenteil, euch zum Deutschlernen motivieren können!\n---\nCHAPTERS:\n00:00 Intro\n00:30 In Berlin sprechen eh alle Englisch\n02:20 Die KI wird eh bald alles übersetzen\n04:11 In Deutschland ist alles trist und grau\n05:48 Die Deutschen sind unfreundlich\n08:21 Deutsch ist gar nicht einfach\n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O&si=qYOyszYJHJ73_3yZ\nC2 (Near-Native Learners): https://youtube.com/playlist?list=PLk1fjOl39-50hTI9yYPnmTIqL_1zWJI1a&si=cn5GMeQARTmIk1bQ\n---\nOUR SPONSORS:\n📺 Lingopie: 7 days free and up to 73% off if you stay https://lingopie.com/easygerman\n🗣️ italki: Get $10 in credits after your first purchase http://go.italki.com/easygerman\n👩‍🏫 GLS Berlin: No registration fee if you mention "Easy German" https://www.easygerman.org/gls\n🔒 NordVPN: Get our exclusive deal https://nordvpn.com/egp\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Carina Schmid/Manuel Salmann\nCamera & Edit: Chris Thornberry\nTranslation: Ben Eve',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=kE62poMh4u4',
+        title: 'Kindheit in verschiedenen Ländern #shorts #childhood #deutschonline',
+        duration: 'PT1M6S',
+        publishedAt: '2024-12-27T19:49:25Z',
+        thumbnail: 'https://i.ytimg.com/vi/kE62poMh4u4/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Wir alle haben unsere eigene, individuelle Kindheit erlebt. Wie wir aufwachsen ist stark von unserem Heimatland und unserer Kultur abhängig. Janusz wollte die genauen Unterschiede herausfinden und hat die Leute auf Berlins Straßen gefragt. \nWie seid ihr aufgewachsen? Hattet ihr eine schöne Kindheit? Wir freuen uns auf eure Kommentare! 😊',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=QUq_1FfTDkY',
+        title: 'Dezember Wetter in Berlin #shorts #weather #slowgerman #germana1 #deutschfüranfänger',
+        duration: 'PT59S',
+        publishedAt: '2024-12-23T10:35:41Z',
+        thumbnail: 'https://i.ytimg.com/vi/QUq_1FfTDkY/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Im Dezember ist es kalt und grau in Berlin. Janusz und Cari erzählen euch in langsamem Deutsch, wie das Wetter in der Hauptstadt ist. Und wie sieht es bei euch aus? Wie ist das Wetter in eurem Heimatland im Dezember?',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=s4R8XtZXYSM',
+        title: 'How Has Studying Abroad Changed You? | Easy German 586',
+        duration: 'PT15M5S',
+        publishedAt: '2024-12-22T18:00:37Z',
+        thumbnail: 'https://i.ytimg.com/vi/s4R8XtZXYSM/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Get the exclusive NordVPN deal here: https://www.nordvpn.com/easygerman. It’s risk-free with Nord’s 30-day money-back guarantee!\n---\nLEARN GERMAN WITH US:\n💡 JOIN OUR COMMUNITY: https://www.easygerman.org/membership\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\n\nWATCH MORE:\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\n➕ TIKTOK: https://www.tiktok.com/@easygerman\n➕ OUR WEBSITE: https://www.easygerman.org/\n📱 LEARN GERMAN WITH OUR PARTNER APP: https://www.seedlang.com\n---\nIn this episode, we talk about studying abroad and how it can change your life. We are guests at the University of California in Santa Barbara, USA. And there we meet students and lecturers who have already spent a longer period abroad or are currently spending time abroad in the USA. In fascinating conversations, we find out what challenges a stay abroad poses, what advantages it brings and what influence it has on you.\n\nIn dieser Episode sprechen wir über Auslandsaufenthalte und wie sie das eigene Leben verändern können. Wir sind zu Gast an der University of California in Santa Barbara, USA. Und dort treffen wir Studierende und Dozierende, die schon mal länger im Ausland waren oder aktuell einen Auslandsaufenthalt in den USA verbringen. Welche Herausforderungen ein Auslandsaufenthalt hat, welche Vorteile er mit sich bringt und welchen Einfluss er auf einen selbst hat, finden wir in spannenden Gesprächen heraus.\n---\nMany thanks to the professors and students at the University of California in Santa Barbara!\n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O&si=qYOyszYJHJ73_3yZ\nC2 (Near-Native Learners): https://youtube.com/playlist?list=PLk1fjOl39-50hTI9yYPnmTIqL_1zWJI1a&si=cn5GMeQARTmIk1bQ\n---\nOUR SPONSORS:\n📺 Lingopie: 7 days free and up to 73% off if you stay https://lingopie.com/easygerman\n🗣️ italki: Get $10 in credits after your first purchase http://go.italki.com/easygerman\n👩‍🏫 GLS Berlin: No registration fee if you mention "Easy German" https://www.easygerman.org/gls\n🔒 NordVPN: Get our exclusive deal https://nordvpn.com/egp\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Janusz Hamerski/Carina Schmid \nCamera: Carina Schmid\nEdit: Rawad Sabbagh\nTranslation: Ben Eve',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=xgqZbvcS5H8',
+        title: 'Tipps zum Deutschlernen #shorts #tipps #learninglanguages',
+        duration: 'PT1M18S',
+        publishedAt: '2024-12-21T20:34:14Z',
+        thumbnail: 'https://i.ytimg.com/vi/xgqZbvcS5H8/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Das habt ihr vielleicht auch schon mal erlebt: Ihr lernt schon eine ganze Weile Deutsch und habt irgendwann das Gefühl, zu stagnieren und einfach nicht weiterzukommen. Wir haben Anna, Deutschlehrerin beim Foreign Service Institute in Washington, D.C. gefragt, was sie Deutschlernenden in diesem Fall empfehlen würde.\nKennt ihr die Situation und was hat euch geholfen? Schreibt’s uns in die Kommentare! 👇\n\nThanks to the team at the Foreign Service Institute and the U.S. State Department. The U.S. State Department does not endorse Easy German or its sponsors.',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=34dPSEzQT0E',
+        title: 'Lebenslauf #shorts #lebenslauf #sprachenlernen',
+        duration: 'PT55S',
+        publishedAt: '2024-12-19T14:32:44Z',
+        thumbnail: 'https://i.ytimg.com/vi/34dPSEzQT0E/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'So unterschiedlich wie die Menschen sind, so individuell sind auch ihre Lebensläufe. Janusz nimmt uns heute mal wieder mit auf die Straßen Berlins und fragt die Menschen, wie ihr Leben bisher so verlaufen ist.\nErzählt uns in den Kommentaren von eurem Lebenslauf! 🤗',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=TDRNIkVE4bw',
+        title: 'Berlin in December in Slow German | Super Easy German 268',
+        duration: 'PT16M24S',
+        publishedAt: '2024-12-18T18:00:21Z',
+        thumbnail: 'https://i.ytimg.com/vi/TDRNIkVE4bw/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            "Learn more German vocab, grammar and more with our partner app Seedlang: https://www.seedlang.com\n---\nLEARN GERMAN WITH US:\n💡 JOIN OUR COMMUNITY: https://www.easygerman.org/membership\n🎧 LISTEN TO OUR PODCAST: http://www.easygerman.fm\n📺 SUBSCRIBE ON YOUTUBE: https://goo.gl/sdP9nz\n\nWATCH MORE:\n➕ INSTAGRAM: https://www.instagram.com/easygermanvideos\n➕ FACEBOOK: https://www.facebook.com/easygermanvideos\n➕ TIKTOK: https://www.tiktok.com/@easygerman\n➕ OUR WEBSITE: https://www.easygerman.org/\n---\nIn this episode, Janusz and I take a walk through Berlin, in slow German. It's December, it's cold and gray in Germany's capital. But there's still plenty to do and see: Late-night kiosks, graffiti and, of course, a visit to the Christmas market. There I try mulled gin, Janusz drinks hot apple juice and we eat a kind of German pizza. Come along and learn lots of useful expressions and words!\n\nIn dieser Episode spazieren Janusz und ich durch Berlin, und zwar auf langsamem Deutsch. Es ist Dezember, in Deutschlands Hauptstadt ist es kalt und grau. Aber es gibt trotzdem viel zu tun und zu sehen: Spätis, Graffitis und natürlich ein Besuch auf dem Weihnachtsmarkt. Dort probiere ich Glüh-Gin, Janusz trinkt heißen Apfelsaft und wir essen eine Art deutsche Pizza. Kommt mit und lernt viele nützliche Ausdrücke und Wörter!\n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O&si=qYOyszYJHJ73_3yZ\nC2 (Near-Native Learners): https://youtube.com/playlist?list=PLk1fjOl39-50hTI9yYPnmTIqL_1zWJI1a&si=cn5GMeQARTmIk1bQ\n---\nOUR SPONSORS:\n📺 Lingopie: 7 days free and up to 73% off if you stay https://lingopie.com/easygerman\n🗣️ italki: Get $10 in credits after your first purchase http://go.italki.com/easygerman\n👩‍🏫 GLS Berlin: No registration fee if you mention \"Easy German\" https://www.easygerman.org/gls\n🔒 NordVPN: Get our exclusive deal https://nordvpn.com/egp\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Janusz Hamerski/Carina Schmid \nCamera: Chris Thornberry\nEdit: Rawad Sabbagh\nTranslation: Ben Eve",
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=ehGZaU0EmpQ',
+        title: 'How Diplomats Learn Languages Fast | Easy German 585',
+        duration: 'PT18M7S',
+        publishedAt: '2024-12-15T18:00:31Z',
+        thumbnail: 'https://i.ytimg.com/vi/ehGZaU0EmpQ/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Thanks to the team at the Foreign Service Institute and the U.S. State Department! The U.S. State Department does not endorse Easy German or its sponsors.\n—\nFind out more about Easy German: https://www.easygerman.org\n---\nIn dieser Episode sind wir zu Gast am Foreign Service Institute in Washington, D.C. Dort treffen wir Miranda, Sophia und Maria, die für das US State Department im auswärtigen Dienst arbeiten. Die Diplomatinnen bereiten sich aktuell auf ihre Einsätze in Österreich und Deutschland vor. Dafür lernen sie seit neun Monaten intensiv Deutsch und sind mittlerweile fließend. Wir möchten von ihnen wissen, wie sie das geschafft haben und welche ihrer Lernmethoden anderen Deutschlernenden helfen können.\n\nIn this episode, we are guests at the Foreign Service Institute in Washington, D.C. There we meet Miranda, Sophia and Maria, who work for the US State Department in the Foreign Service. The diplomats are currently preparing for their assignments in Austria and Germany. They have been studying German intensively for nine months and are now fluent. We would like to know from them how they have achieved this and which of their learning methods can help other German learners.\n---\nALL OUR VIDEOS SORTED BY LEVEL\nA1 (Absolute Beginners): https://youtube.com/playlist?list=PLk1fjOl39-50kWobutO8NVFzbw9PHtbbg\nA2 (Advanced Beginners): https://youtube.com/playlist?list=PLk1fjOl39-5201BUdhtOM_x23poNvLouT\nB1 (Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-53yooogv6RaJAK29mx7nz1d\nB2 (Upper Intermediate Learners): https://youtube.com/playlist?list=PLk1fjOl39-51lvdiuQYsLW-0aGIdNNknA\nC1 (Advanced Learners): https://youtube.com/playlist?list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O&si=qYOyszYJHJ73_3yZ\nC2 (Near-Native Learners): https://youtube.com/playlist?list=PLk1fjOl39-50hTI9yYPnmTIqL_1zWJI1a&si=cn5GMeQARTmIk1bQ\n---\nPRODUCED BY:\nEasy Languages is a video and podcast series that showcases language as spoken in the streets and among friends. Our goal is to help you learn languages in a fun and authentic way. We are based in Berlin, Germany, but operate with a global network of producers. Learn more about us and check out our other channels:\nhttp://www.easy-languages.org\n---\nHosts of this episode: Carina Schmid \nCamera: Manuel Salmann\nEdit: Rawad Sabbagh\nTranslation: Ben Eve',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=FXFZnSNyb68',
+        title: 'Was bereust du? #shorts #regret #deutsch',
+        duration: 'PT54S',
+        publishedAt: '2024-12-14T20:59:44Z',
+        thumbnail: 'https://i.ytimg.com/vi/FXFZnSNyb68/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Unsere heutige Frage an die Menschen auf Berlins Straßen habt ihr euch bestimmt auch schon mal selber gestellt:\nWenn du dein Leben nochmal leben dürftest, gibt es etwas, das du anders machen würdest?\nWir sind gespannt auf eure Antworten! 🤗',
+    },
+    {
+        videoUrl: 'https://www.youtube.com/watch?v=e0uZN24d6Eo',
+        title: 'Was kostet Mittagessen? #shorts #lunch #deutschlernen',
+        duration: 'PT52S',
+        publishedAt: '2024-12-13T18:49:52Z',
+        thumbnail: 'https://i.ytimg.com/vi/e0uZN24d6Eo/hqdefault.jpg',
+        channelTitle: 'Easy German',
+        description:
+            'Habt ihr euch schon mal gefragt, was ein Mittagessen in Berlin kostet? Cari und Janusz erzählen heute, wie viel sie normalerweise im Restaurant bezahlen und welche Preise sie als teuer oder günstig empfinden. 🥙\nWie viel zahlt man in eurem Heimatland für ein Mittagessen? Schreibt’s uns in die Kommentare! 😊',
+    },
+];
+
+export default page1;

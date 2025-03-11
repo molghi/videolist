@@ -45,7 +45,15 @@ textarea {
 }
 
 button {
-    transition: all 0.3s;
+    border: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+}
+button:hover {
+    border-bottom: transparent;
+}
+button:active {
+    opacity: 0.5;
 }
 
 input:focus,
@@ -93,6 +101,26 @@ input::placeholder {
 
 .container {
     max-width: 1170px;
+    margin: 0 auto;
+    width: 100%;
+
+    @media (max-width: 1182px) {
+        max-width: 970px;
+    }
+
+    @media (max-width: 993px) {
+        max-width: 750px;
+    }
+
+    @media (max-width: 768px) {
+        max-width: none;
+        padding: 0 10px;
+    }
+}
+
+.container-big {
+    /* max-width: 1350px; */
+    max-width: 95vw;
     margin: 0 auto;
     width: 100%;
 

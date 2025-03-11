@@ -1,0 +1,281 @@
+.main {
+}
+
+.main__inner {
+    padding-bottom: 10rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+table thead {
+    width: 100%;
+    /* position: sticky; */
+}
+
+table thead tr,
+table tbody tr {
+    width: 100%;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+}
+
+table thead tr th {
+    background-color: var(--accent);
+    color: var(--bg);
+    border-color: var(--bg);
+    border-width: 2px;
+    width: auto;
+    /* border-bottom-color: var(--accent); */
+}
+
+table tbody tr td {
+    border: 2px solid var(--accent);
+    padding: 1rem;
+}
+
+/* table head cells */
+table thead tr th:nth-child(1) {
+    border-left-color: var(--accent);
+    width: 50px;
+}
+table thead tr th:nth-child(2) {
+    width: 15%;
+}
+table thead tr th:nth-child(3) {
+    width: 25%;
+}
+table thead tr th:nth-child(4) {
+    width: 150px;
+}
+table thead tr th:nth-child(5) {
+    width: 98px;
+}
+table thead tr th:nth-child(6) {
+    width: 107px;
+}
+table thead tr th:nth-child(7) {
+    width: 127px;
+}
+table thead tr th:nth-child(8) {
+    width: 60px;
+}
+table thead tr th:nth-child(9) {
+    width: 120px;
+}
+table thead tr th:nth-child(10) {
+    width: 95px;
+    border-right-color: var(--accent);
+}
+
+table th {
+    border: 1px solid var(--accent);
+    padding: 1rem;
+}
+
+table tr:hover {
+    background-color: #181818;
+}
+
+.video-item {
+}
+
+.video-item__index {
+}
+
+.video-item__channel {
+    font-size: 1.4rem;
+}
+
+.video-item__title {
+    font-size: 1.4rem;
+}
+
+.video-item__released {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.video-item__duration {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.video-item__thumbnail {
+    text-align: center;
+    position: relative;
+}
+
+.video-item__description {
+    text-align: center;
+    position: relative;
+}
+
+.video-item__watch {
+    text-align: center;
+}
+
+.video-item__status {
+}
+
+.video-item__rating {
+    text-align: center;
+}
+
+.thumbnail {
+    position: absolute;
+    z-index: 6;
+    top: 12px;
+    left: 12px;
+    border: 2px solid var(--accent);
+    width: 400px;
+    background-color: #000;
+    min-height: 300px;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail__close,
+.description__close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: var(--accent);
+    color: #000;
+    padding: 5px;
+}
+.thumbnail__close:hover,
+.description__close:hover {
+    opacity: 0.7;
+}
+
+.description {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 900px;
+    z-index: 5;
+    border: 2px solid var(--accent);
+    background-color: #000;
+    padding: 4rem;
+    line-height: 1.5;
+    text-align: left;
+    white-space: pre-line;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.video-playbox {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.video-playbox:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+}
+
+.video-playbox iframe {
+    position: relative;
+    z-index: 10;
+    margin: 0 auto;
+}
+
+.video-playbox__close {
+    position: absolute;
+    z-index: 10;
+    top: 1.5rem;
+    right: 1.5rem;
+    background-color: var(--accent);
+    color: #000;
+    padding: 5px;
+}
+.video-playbox__close:hover {
+    opacity: 0.7;
+}
+.video-playbox__close:active {
+    opacity: 0.4;
+}
+
+.video-playbox__video-place {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1280px;
+    height: 720px;
+    background-color: black;
+    border: 1px solid var(--accent);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.o-h {
+    overflow: hidden;
+}
+
+td.video-item__status {
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.radio-choice {
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    font-size: 2rem;
+    border: 1px solid var(--accent);
+    text-align: center;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type='radio']:checked ~ label {
+    background-color: var(--accent);
+    color: #000;
+}
+
+.radio-wrapper {
+    position: relative;
+}
+
+.radio-wrapper input[type='radio'] {
+    position: absolute;
+    top: -8px;
+    left: 0;
+    opacity: 0;
+    width: 30px;
+    height: 30px;
+}
