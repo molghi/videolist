@@ -103,25 +103,25 @@ function VideoItem({ data, index, showVideo }) {
             </td>
             <td className="video-item__status" title="Unwatched, Started, Watched">
                 <label className="radio-wrapper">
-                    <input name="status" type="radio" />
+                    <input name={`status-${index}`} type="radio" />
                     <label className="radio-choice">U</label>
                 </label>
                 <label className="radio-wrapper">
-                    <input name="status" type="radio" />
+                    <input name={`status-${index}`} type="radio" />
                     <label className="radio-choice">S</label>
                 </label>
                 <label className="radio-wrapper">
-                    <input name="status" type="radio" />
+                    <input name={`status-${index}`} type="radio" />
                     <label className="radio-choice">W</label>
                 </label>
             </td>
             <td className="video-item__rating" title="Liked, Disliked">
                 <label className="radio-wrapper">
-                    <input name="rating" type="radio" />
+                    <input name={`rating-${index}`} type="radio" />
                     <label className="radio-choice">L</label>
                 </label>
                 <label className="radio-wrapper">
-                    <input name="rating" type="radio" />
+                    <input name={`rating-${index}`} type="radio" />
                     <label className="radio-choice">D</label>
                 </label>
             </td>

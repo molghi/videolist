@@ -1,57 +1,24 @@
 import { useState } from 'react';
-import { createPortal } from 'react-dom';
 import './Main.css';
+import './videoPlaybox.css';
 import data from './data';
-import VideoItem from './VideoItem';
-// console.log(data);
+import VideoItem from './VideoItem'; // video as a table row (its meta data)
+import VideoBox from './VideoBox'; // video as a video element to click and play
 
 function Main() {
-    const [video, setVideo] = useState('');
+    const [videoBoxShown, setVideoBoxShown] = useState(false);
+    const [videoData, setVideoData] = useState();
 
-    const closeVideo = () => {
-        setVideo('');
-        document.body.classList.remove('o-h');
-    };
-
-    const showVideo = (data) => {
-        const url = `https://www.youtube.com/embed/${data.videoUrl.slice(data.videoUrl.indexOf('?v=') + 3)}`;
-        setVideo(
-            <div className="video-playbox">
-                <button onClick={closeVideo} className="video-playbox__close">
-                    close
-                </button>
-                <div className="video-playbox__video-place">The video will be here...</div>
-                <iframe
-                    width="1280"
-                    height="720"
-                    src={url}
-                    title={data.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                ></iframe>
-            </div>
-        );
-        document.body.classList.add('o-h'); // overflow hidden
+    const handleShowingVideo = (index) => {
+        setVideoData(data[index]);
+        setVideoBoxShown(true);
     };
 
     const videoItems = data.map((x, i) => {
-        return <VideoItem key={i} data={x} index={i} showVideo={showVideo} />;
+        return <VideoItem key={i} data={x} index={i} showVideo={() => handleShowingVideo(i)} />;
     });
 
-    const headers = [
-        'index',
-        'channel',
-        'title',
-        'released',
-        'duration',
-        'thumbnail',
-        'description',
-        'watch',
-        'status',
-        'rating',
-    ];
+    const headers = ['index', 'channel', 'title', 'released', 'duration', 'thumbnail', 'description', 'watch', 'status', 'rating'];
 
     return (
         <main className="main">
@@ -67,8 +34,7 @@ function Main() {
                         </thead>
                         <tbody>{videoItems}</tbody>
                     </table>
-                    {video}
-                    {video !== '' && createPortal(document.querySelector('.video-playbox'), document.querySelector('.modal'))}
+                    <VideoBox isShown={videoBoxShown} data={videoData} setShown={setVideoBoxShown} />
                 </div>
             </div>
         </main>

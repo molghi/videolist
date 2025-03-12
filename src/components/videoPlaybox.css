@@ -1,0 +1,216 @@
+.video-playbox {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.video-playbox:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+}
+
+.video-playbox iframe {
+    position: relative;
+    z-index: 10;
+    margin: 0 auto;
+}
+
+.video-playbox button {
+    border-bottom: none;
+}
+
+.video-playbox__close {
+    position: absolute;
+    z-index: 10;
+    top: 1.5rem;
+    right: 1.5rem;
+    background-color: var(--accent);
+    color: #000;
+    padding: 5px;
+}
+.video-playbox__close:hover {
+    opacity: 0.7;
+}
+.video-playbox__close:active {
+    opacity: 0.4;
+}
+
+.video-playbox__video-place {
+    position: absolute;
+    z-index: 6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 960px;
+    height: 540px;
+    background-color: black;
+    border: 1px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.video-playbox__filter-btn {
+    /* background-color: rgb(0, 50, 0); */
+    background-color: var(--accent);
+    color: #000;
+    padding: 3px 5px;
+    font-size: 1.4rem;
+    /* text-decoration: underline; */
+    display: inline-block;
+}
+.video-playbox__filter-btn:hover {
+}
+
+.video-playbox__frame-box {
+    position: relative;
+    width: 960px;
+    height: 540px;
+    margin: 0 auto;
+}
+
+.video-playbox__filter {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 100%;
+}
+
+.video-playbox__filter {
+    filter: brightness(30%);
+    padding: 1rem;
+    padding-bottom: 0.3rem;
+    background-color: black;
+}
+.video-playbox__filter::before {
+    content: '';
+    position: absolute;
+    z-index: -11;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-playbox__filter:hover {
+    filter: brightness(100%);
+}
+
+.video-playbox__filter-setting {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    margin-bottom: 1rem;
+}
+.video-playbox__filter-setting label {
+    font-size: 1.4rem;
+    min-width: 85px;
+}
+.video-playbox__filter-setting input {
+    height: 5px;
+    accent-color: var(--accent);
+    box-shadow: none;
+}
+
+.video-playbox__filter-veil {
+    position: absolute;
+    z-index: 55;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+}
+
+.video-playbox__vignette,
+.video-playbox__noise {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-playbox__vignette:after {
+    /* display: none; */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.99) 100%);
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 44;
+}
+
+.video-playbox__noise:after,
+.video-playbox__noise:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.185;
+    opacity: 0.2;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 40;
+}
+
+.video-playbox__noise:after {
+    background: url('../images/noise7.gif') 0 0 no-repeat;
+    background-size: cover;
+}
+
+.video-playbox__noise:before {
+    /* display: none; */
+    /* background: url('../images/noise4.gif') 0 0 no-repeat; */
+    /* background-size: cover; */
+    /* opacity: 0.15; */
+}
+
+.video-playbox__row {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.video-playbox__btns {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+.video-playbox__btn {
+    text-decoration: underline;
+}
+.video-playbox__btn:hover {
+    text-decoration: none;
+}
+.video-playbox__btn:active {
+    opacity: 0.5;
+}
