@@ -1,22 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
 
 function VideoBox({ isShown, data, setShown }) {
-    console.log(JSON.parse(localStorage.getItem('userVideoSettings')));
-    const [brightness, setBrightness] = useState(100);
-    const [contrast, setContrast] = useState(100);
-    const [grayscale, setGrayscale] = useState(0);
-    const [sepia, setSepia] = useState(0);
-    const [vignette, setVignette] = useState(false);
-    const [noise, setNoise] = useState(false);
+    // console.log(JSON.parse(localStorage.getItem('userVideoSettings')));
+    const iframeWidth = '960';
+    const iframeHeight = '540';
     const vignetteEl = useRef();
     const noiseEl = useRef();
     const [userVideoSettings, setUserVideoSettings] = useState({
-        // brightness: JSON.parse(localStorage.getItem('userVideoSettings'))?.brightness || 100,
-        // contrast: JSON.parse(localStorage.getItem('userVideoSettings'))?.contrast || 100,
-        // grayscale: JSON.parse(localStorage.getItem('userVideoSettings'))?.grayscale || 0,
-        // sepia: JSON.parse(localStorage.getItem('userVideoSettings'))?.sepia || 0,
-        // vignette: JSON.parse(localStorage.getItem('userVideoSettings'))?.vignette || false,
-        // noise: JSON.parse(localStorage.getItem('userVideoSettings'))?.noise || false,
         brightness: 100,
         contrast: 100,
         grayscale: 0,
@@ -26,60 +16,72 @@ function VideoBox({ isShown, data, setShown }) {
     });
 
     useEffect(() => {
+        const checkFullscreen = () => {
+            if (document.fullscreenElement?.tagName === 'IFRAME') {
+                console.log('apply classes to body');
+                userVideoSettings.vignette && document.querySelector('.video-playbox__frame-box').classList.add('video-playbox__vignette');
+                userVideoSettings.noise && document.querySelector('.video-playbox__frame-box').classList.add('video-playbox__noise');
+            } else {
+                console.log('remove classes from body');
+                document.querySelector('.video-playbox__frame-box').classList.remove('video-playbox__vignette');
+                document.querySelector('.video-playbox__frame-box').classList.remove('video-playbox__noise');
+            }
+        };
+        document.addEventListener('fullscreenchange', checkFullscreen);
+        return () => document.removeEventListener('fullscreenchange', checkFullscreen);
+    });
+
+    useEffect(() => {
+        // on first render/page refresh, fetch state from LS and set it
         const savedSettings = JSON.parse(localStorage.getItem('userVideoSettings'));
-        // HERE IT IS STILL FINE
-        // console.log(savedSettings);
         if (savedSettings) {
-            setUserVideoSettings(savedSettings); // set state from LS on first render
+            // console.log('1', savedSettings);
+            setUserVideoSettings((prev) => {
+                return { ...prev, ...savedSettings };
+            });
         }
     }, []);
 
     useEffect(() => {
-        // HERE SOMETHING IS WRONG
-        setUserVideoSettings((prev) => ({ ...prev, brightness, contrast, grayscale, sepia, vignette, noise }));
-        localStorage.setItem('userVideoSettings', JSON.stringify({ ...userVideoSettings, brightness, contrast, grayscale, sepia, vignette, noise }));
-        // const fromLS = localStorage.getItem('userVideoSettings');
-        // if (!fromLS) {
-        //     setUserVideoSettings((prev) => ({ ...prev, brightness, contrast, grayscale, sepia, vignette, noise }));
-        //     localStorage.setItem('userVideoSettings', JSON.stringify({ ...userVideoSettings, brightness, contrast, grayscale, sepia, vignette, noise }));
-        // } else {
-        // const parsed = JSON.parse(localStorage.getItem('userVideoSettings'));
-        // console.log(parsed);
-        // setUserVideoSettings((prev) => ({ ...prev, ...parsed }));
-        //     setUserVideoSettings((prev) => ({ ...prev, brightness, contrast, grayscale, sepia, vignette, noise }));
-        //     localStorage.setItem('userVideoSettings', JSON.stringify({ ...userVideoSettings, brightness, contrast, grayscale, sepia, vignette, noise }));
-        // }
-    }, [brightness, contrast, grayscale, sepia, vignette, noise]);
+        setTimeout(() => {
+            // setUserVideoSettings((prev) => ({ ...prev }));
+            // console.log('2', userVideoSettings);
+            localStorage.setItem('userVideoSettings', JSON.stringify({ ...userVideoSettings }));
+        }, 500); // small timeout so the first useEffect could do its business else this useEffect operates on unupdated values
+    }, [userVideoSettings]);
 
-    if (!data || !isShown) return document.body.classList.remove('o-h');
+    if (!data || !isShown) return document.body.classList.remove('o-h'); // remove overflow hidden
     document.body.classList.add('o-h');
 
-    const filters = ['brightness', 'contrast', 'grayscale', 'sepia'];
+    const filters = ['brightness', 'contrast', 'grayscale', 'sepia']; // filter names
 
-    const url = `https://www.youtube.com/embed/${data.videoUrl.slice(data.videoUrl.indexOf('?v=') + 3)}`;
+    const url = `https://www.youtube.com/embed/${data.videoUrl.slice(data.videoUrl.indexOf('?v=') + 3)}`; // getting url for iframe
 
     const handleFilterChange = (e, inputName) => {
-        if (inputName === 'brightness') setBrightness(e.target.value);
-        if (inputName === 'contrast') setContrast(e.target.value);
-        if (inputName === 'grayscale') setGrayscale(e.target.value);
-        if (inputName === 'sepia') setSepia(e.target.value);
+        // runs upon change of input value
+        if (inputName === 'brightness') setUserVideoSettings((prev) => ({ ...prev, brightness: e.target.value }));
+        if (inputName === 'contrast') setUserVideoSettings((prev) => ({ ...prev, contrast: e.target.value }));
+        if (inputName === 'grayscale') setUserVideoSettings((prev) => ({ ...prev, grayscale: e.target.value }));
+        if (inputName === 'sepia') setUserVideoSettings((prev) => ({ ...prev, sepia: e.target.value }));
         if (inputName === 'vignette') {
-            setVignette(!vignette);
+            setUserVideoSettings((prev) => ({ ...prev, vignette: !prev.vignette }));
             vignetteEl.current.classList.toggle('hidden');
         }
         if (inputName === 'noise') {
-            setNoise(!noise);
+            setUserVideoSettings((prev) => ({ ...prev, noise: !prev.noise }));
             noiseEl.current.classList.toggle('hidden');
         }
     };
 
     const handleValue = (inputName) => {
-        if (inputName === 'brightness') return brightness;
-        if (inputName === 'contrast') return contrast;
-        if (inputName === 'grayscale') return grayscale;
-        if (inputName === 'sepia') return sepia;
+        // passing 'value' attr to input range (video effects)
+        if (inputName === 'brightness') return userVideoSettings.brightness;
+        if (inputName === 'contrast') return userVideoSettings.contrast;
+        if (inputName === 'grayscale') return userVideoSettings.grayscale;
+        if (inputName === 'sepia') return userVideoSettings.sepia;
     };
 
+    // setting content
     const content = (
         <div className="video-playbox">
             <button onClick={() => setShown(false)} className="video-playbox__close">
@@ -90,19 +92,21 @@ function VideoBox({ isShown, data, setShown }) {
 
             <div className="video-playbox__frame-box">
                 <iframe
-                    width="960"
-                    height="540"
+                    width={iframeWidth}
+                    height={iframeHeight}
                     src={url}
                     title={data.title}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
-                    style={{ filter: `brightness(${brightness}%) contrast(${contrast}%) grayscale(${grayscale}%) sepia(${sepia}%)` }}
+                    style={{
+                        filter: `brightness(${userVideoSettings.brightness}%) contrast(${userVideoSettings.contrast}%) grayscale(${userVideoSettings.grayscale}%) sepia(${userVideoSettings.sepia}%)`,
+                    }}
                 ></iframe>
 
-                <div ref={vignetteEl} className="video-playbox__vignette hidden"></div>
-                <div ref={noiseEl} className="video-playbox__noise hidden"></div>
+                <div ref={vignetteEl} className={`video-playbox__vignette ${userVideoSettings.vignette === false ? 'hidden' : ''}`}></div>
+                <div ref={noiseEl} className={`video-playbox__noise ${userVideoSettings.noise === false ? 'hidden' : ''}`}></div>
 
                 <div className="video-playbox__filter">
                     <div className="video-playbox__row">

@@ -1,46 +1,25 @@
-import { useState } from 'react';
-import { differenceInDays, differenceInWeeks, differenceInMonths, differenceInYears } from 'date-fns';
+import { useState, useEffect } from 'react';
 import './VideoItem.css';
+import { formatDuration, getReleased, formatReleased, pad } from '../utilities/formatDurationReleased';
 
-const pad = (value) => value.toString().padStart(2, '0');
-
-function formatDuration(durationString) {
-    const match = durationString.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
-    const hours = match[1] ? parseInt(match[1]) : 0;
-    const minutes = match[2] ? parseInt(match[2]) : 0;
-    const seconds = match[3] ? parseInt(match[3]) : 0;
-    return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
-}
-
-function getReleased(releasedString) {
-    const then = new Date(releasedString);
-    const day = then.getDate();
-    const month = then.getMonth() + 1;
-    const year = then.getFullYear().toString().slice(2);
-    const now = new Date();
-    let content = '';
-    const days = differenceInDays(now, then);
-    const weeks = differenceInWeeks(now, then);
-    const months = differenceInMonths(now, then);
-    const years = differenceInYears(now, then);
-    if (days < 8) content = days + ` ${days === 1 ? 'day' : 'days'} ago`;
-    if (days >= 8 && weeks < 11) content = weeks + ` ${weeks === 1 ? 'week' : 'weeks'} ago`;
-    if (weeks >= 11) content = months + ` ${months === 1 ? 'month' : 'months'} ago`;
-    if (months > 12) content = years + ` ${years === 1 ? 'year' : 'years'} ago`;
-    const formatted = `${day}/${month}/'${year}`;
-    return [content, formatted];
-}
-
-function formatReleased(releasedString) {
-    const [content, formatted] = getReleased(releasedString);
-    return <span title={`${content} − ${formatted}`}>{content}</span>;
-}
-
-// ================================================================================================
-
-function VideoItem({ data, index, showVideo }) {
+function VideoItem({ data, index, showVideo, shortsAreVisible, handleStatusesRatings, statusesRatings }) {
     const [thumb, setThumb] = useState('');
     const [description, setDescription] = useState('');
+    const [statusRating, setStatusRating] = useState({
+        status: 'unset',
+        rating: 'unset',
+    });
+    const videoId = data.videoUrl.split('?v=')[1];
+
+    useEffect(() => {}, []);
+
+    const handleRadioClick = (grouping, value) => {
+        // handle Status or Rating radio btns click
+        setStatusRating((prev) => ({ ...prev, [grouping]: value }));
+        const obj = { [videoId]: { ...statusRating, [grouping]: value } };
+        handleStatusesRatings(obj);
+        if (grouping === 'status') console.log(`upd quick stats`);
+    };
 
     const closeThumb = () => setThumb('');
 
@@ -81,14 +60,16 @@ function VideoItem({ data, index, showVideo }) {
         showVideo(data);
     };
 
-    return (
-        <tr className="video-item" id={data.videoUrl.slice(data.videoUrl.indexOf('?v=') + 3)}>
+    const itemDuration = formatDuration(data.duration);
+
+    const content = (
+        <tr className={`video-item`} id={data.videoUrl.slice(data.videoUrl.indexOf('?v=') + 3)}>
             <td className="video-item__index">{pad(index + 1)}</td>
             <td className="video-item__channel">{data.channelTitle}</td>
             <td className="video-item__title">{data.title}</td>
             <td className="video-item__released">{formatReleased(data.publishedAt)}</td>
             <td className="video-item__duration" title="Hours, Minutes, Seconds">
-                {formatDuration(data.duration)}
+                {itemDuration}
             </td>
             <td className="video-item__thumbnail">
                 <button onClick={showThumb}>View</button>
@@ -103,30 +84,65 @@ function VideoItem({ data, index, showVideo }) {
             </td>
             <td className="video-item__status" title="Unwatched, Started, Watched">
                 <label className="radio-wrapper">
-                    <input name={`status-${index}`} type="radio" />
+                    <input
+                        name={`status-${index}`}
+                        type="radio"
+                        value="unwatched"
+                        checked={statusesRatings[videoId]?.status === 'unwatched' ? true : false}
+                        onClick={() => handleRadioClick('status', 'unwatched')}
+                    />
                     <label className="radio-choice">U</label>
                 </label>
                 <label className="radio-wrapper">
-                    <input name={`status-${index}`} type="radio" />
+                    <input
+                        name={`status-${index}`}
+                        type="radio"
+                        value="started"
+                        checked={statusesRatings[videoId]?.status === 'started' ? true : false}
+                        onClick={() => handleRadioClick('status', 'started')}
+                    />
                     <label className="radio-choice">S</label>
                 </label>
                 <label className="radio-wrapper">
-                    <input name={`status-${index}`} type="radio" />
+                    <input
+                        name={`status-${index}`}
+                        type="radio"
+                        value="watched"
+                        checked={statusesRatings[videoId]?.status === 'watched' ? true : false}
+                        onClick={() => handleRadioClick('status', 'watched')}
+                    />
                     <label className="radio-choice">W</label>
                 </label>
             </td>
             <td className="video-item__rating" title="Liked, Disliked">
                 <label className="radio-wrapper">
-                    <input name={`rating-${index}`} type="radio" />
+                    <input
+                        name={`rating-${index}`}
+                        type="radio"
+                        value="liked"
+                        checked={statusesRatings[videoId]?.rating === 'liked' ? true : false}
+                        onClick={() => handleRadioClick('rating', 'liked')}
+                    />
                     <label className="radio-choice">L</label>
                 </label>
                 <label className="radio-wrapper">
-                    <input name={`rating-${index}`} type="radio" />
+                    <input
+                        name={`rating-${index}`}
+                        type="radio"
+                        value="disliked"
+                        checked={statusesRatings[videoId]?.rating === 'disliked' ? true : false}
+                        onClick={() => handleRadioClick('rating', 'disliked')}
+                    />
                     <label className="radio-choice">D</label>
                 </label>
             </td>
         </tr>
     );
+
+    let toShow = '';
+    if (shortsAreVisible || itemDuration.split(':')[1] > 1) toShow = content;
+
+    return toShow;
 }
 
 export default VideoItem;
