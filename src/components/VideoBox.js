@@ -14,6 +14,9 @@ function VideoBox({ isShown, data, setShown }) {
         vignette: false,
         noise: false,
     });
+    const [enlarged, setEnlarged] = useState(false);
+    const myIframe = useRef();
+    const myWrapper = useRef();
 
     useEffect(() => {
         const checkFullscreen = () => {
@@ -81,9 +84,31 @@ function VideoBox({ isShown, data, setShown }) {
         if (inputName === 'sepia') return userVideoSettings.sepia;
     };
 
+    const handleEnlarge = () => {
+        setEnlarged((prev) => {
+            if (!prev) {
+                myIframe.current.width = window.innerWidth;
+                myIframe.current.height = window.innerHeight;
+                myIframe.current.parentElement.style.width = '100%';
+                myIframe.current.parentElement.style.height = '100%';
+                [...myWrapper.current.querySelectorAll('button')].forEach((btn) => btn.classList.add('btn-vid-enlarged'));
+            } else {
+                myIframe.current.width = iframeWidth;
+                myIframe.current.height = iframeHeight;
+                myIframe.current.parentElement.style.width = iframeWidth + 'px';
+                myIframe.current.parentElement.style.height = iframeHeight + 'px';
+                [...myWrapper.current.querySelectorAll('button')].forEach((btn) => btn.classList.remove('btn-vid-enlarged'));
+            }
+            return !prev;
+        });
+    };
+
     // setting content
     const content = (
-        <div className="video-playbox">
+        <div className="video-playbox" ref={myWrapper}>
+            <button onClick={handleEnlarge} className="video-playbox__enlarge">
+                enlarge
+            </button>
             <button onClick={() => setShown(false)} className="video-playbox__close">
                 close
             </button>
@@ -100,6 +125,7 @@ function VideoBox({ isShown, data, setShown }) {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
+                    ref={myIframe}
                     style={{
                         filter: `brightness(${userVideoSettings.brightness}%) contrast(${userVideoSettings.contrast}%) grayscale(${userVideoSettings.grayscale}%) sepia(${userVideoSettings.sepia}%)`,
                     }}

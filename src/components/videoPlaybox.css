@@ -35,7 +35,8 @@
     border-bottom: none;
 }
 
-.video-playbox__close {
+.video-playbox__close,
+.video-playbox__enlarge {
     position: absolute;
     z-index: 10;
     top: 1.5rem;
@@ -44,10 +45,15 @@
     color: #000;
     padding: 5px;
 }
-.video-playbox__close:hover {
+.video-playbox__enlarge {
+    right: 9rem;
+}
+.video-playbox__close:hover,
+.video-playbox__enlarge:hover {
     opacity: 0.7;
 }
-.video-playbox__close:active {
+.video-playbox__close:active,
+.video-playbox__enlarge:active {
     opacity: 0.4;
 }
 
@@ -217,4 +223,15 @@
 }
 .video-playbox__btn:active {
     opacity: 0.5;
+}
+
+.btn-vid-enlarged {
+    opacity: 0.5 !important;
+    z-index: 100 !important;
+    filter: grayscale(100%);
+}
+.btn-vid-enlarged:hover {
+    opacity: 1 !important;
+    box-shadow: 0 0 10px var(--accent);
+    filter: none;
 }

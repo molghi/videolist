@@ -11,14 +11,20 @@ function VideoItem({ data, index, showVideo, shortsAreVisible, handleStatusesRat
     });
     const videoId = data.videoUrl.split('?v=')[1];
 
-    useEffect(() => {}, []);
+    useEffect(() => {
+        if (!statusesRatings[videoId]) return;
+        setStatusRating((prev) => ({ ...prev, ...statusesRatings[videoId] }));
+    }, [statusesRatings]);
 
     const handleRadioClick = (grouping, value) => {
         // handle Status or Rating radio btns click
-        setStatusRating((prev) => ({ ...prev, [grouping]: value }));
-        const obj = { [videoId]: { ...statusRating, [grouping]: value } };
-        handleStatusesRatings(obj);
-        if (grouping === 'status') console.log(`upd quick stats`);
+        let obj;
+        setStatusRating((prev) => {
+            obj = { [videoId]: { ...prev, [grouping]: value } };
+            handleStatusesRatings(obj);
+            return { ...prev, [grouping]: value };
+        });
+        // if (grouping === 'status') console.log(`upd quick stats`);
     };
 
     const closeThumb = () => setThumb('');
@@ -89,6 +95,7 @@ function VideoItem({ data, index, showVideo, shortsAreVisible, handleStatusesRat
                         type="radio"
                         value="unwatched"
                         checked={statusesRatings[videoId]?.status === 'unwatched' ? true : false}
+                        onChange={() => {}}
                         onClick={() => handleRadioClick('status', 'unwatched')}
                     />
                     <label className="radio-choice">U</label>
@@ -99,6 +106,7 @@ function VideoItem({ data, index, showVideo, shortsAreVisible, handleStatusesRat
                         type="radio"
                         value="started"
                         checked={statusesRatings[videoId]?.status === 'started' ? true : false}
+                        onChange={() => {}}
                         onClick={() => handleRadioClick('status', 'started')}
                     />
                     <label className="radio-choice">S</label>
@@ -109,6 +117,7 @@ function VideoItem({ data, index, showVideo, shortsAreVisible, handleStatusesRat
                         type="radio"
                         value="watched"
                         checked={statusesRatings[videoId]?.status === 'watched' ? true : false}
+                        onChange={() => {}}
                         onClick={() => handleRadioClick('status', 'watched')}
                     />
                     <label className="radio-choice">W</label>
@@ -121,6 +130,7 @@ function VideoItem({ data, index, showVideo, shortsAreVisible, handleStatusesRat
                         type="radio"
                         value="liked"
                         checked={statusesRatings[videoId]?.rating === 'liked' ? true : false}
+                        onChange={() => {}}
                         onClick={() => handleRadioClick('rating', 'liked')}
                     />
                     <label className="radio-choice">L</label>
@@ -131,6 +141,7 @@ function VideoItem({ data, index, showVideo, shortsAreVisible, handleStatusesRat
                         type="radio"
                         value="disliked"
                         checked={statusesRatings[videoId]?.rating === 'disliked' ? true : false}
+                        onChange={() => {}}
                         onClick={() => handleRadioClick('rating', 'disliked')}
                     />
                     <label className="radio-choice">D</label>

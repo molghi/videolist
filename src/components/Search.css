@@ -1,0 +1,20 @@
+.search {
+    width: 40rem;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+.search input {
+    padding: 3px 5px;
+    width: 100%;
+    font-size: 1.4rem;
+}
+
+.search button {
+    border-bottom: none;
+    text-decoration: underline;
+}
+
+.search button:hover {
+    text-decoration: none;
+}

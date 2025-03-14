@@ -1,6 +1,7 @@
 import './Header.css';
+import Search from './Search';
 
-function Header() {
+function Header({ setResults }) {
     return (
         <header className="header">
             <div className="container">
@@ -10,6 +11,9 @@ function Header() {
                     </div>
                     <div className="header__column">
                         <div className="header__about">A minimalist alternative to YouTube</div>
+                    </div>
+                    <div className="header__column">
+                        <Search setResults={setResults} />
                     </div>
                 </div>
             </div>
