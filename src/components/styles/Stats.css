@@ -1,0 +1,18 @@
+.main__stats {
+    margin-right: auto;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.main__stats span:nth-child(1) {
+    text-shadow: 0 0 3px var(--accent);
+}
+
+@media (max-width: 993px) {
+    .main__stats {
+        flex-wrap: wrap;
+        line-height: 1.25;
+    }
+}

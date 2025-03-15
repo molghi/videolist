@@ -1,0 +1,23 @@
+.above-buttons {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.main__above button {
+    border-bottom: none;
+    padding: 3px 5px;
+    background-color: var(--accent);
+    color: #000;
+    opacity: 0.5;
+    transition: none;
+}
+
+.main__above button:hover {
+    opacity: 1;
+    box-shadow: 0 0 10px var(--accent);
+}
+
+.main__above button:active {
+    opacity: 0.5;
+}

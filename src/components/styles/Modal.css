@@ -1,0 +1,105 @@
+.modal-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    backdrop-filter: blur(1px);
+}
+
+.modal-box:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.6;
+}
+
+.modal-inner {
+    position: relative;
+    z-index: 101;
+    background-color: #252525;
+    width: 700px;
+    min-height: 400px;
+    max-height: 90vh;
+    margin: 0 auto;
+    padding: 4rem;
+    transition: all 0.3s;
+    animation: reveal 0.5s linear 0.2s;
+    animation-fill-mode: both;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border-bottom: none;
+    padding: 4px 5px;
+    background-color: #000;
+    display: inline-block;
+    color: var(--accent);
+}
+
+.modal-close:hover {
+    opacity: 0.7;
+}
+
+.modal-close:active {
+    opacity: 0.5;
+}
+
+.modal-title {
+    font-size: 2.4rem;
+    margin-bottom: 4rem;
+}
+
+.modal-entries {
+    min-height: 3rem;
+    max-height: 72vh;
+    overflow-y: auto;
+}
+
+.modal-entry {
+    display: flex;
+    column-gap: 2rem;
+}
+
+.modal-entry + .modal-entry {
+    margin-top: 2rem;
+}
+
+.modal-entry button:hover {
+    border-bottom: 1px solid transparent;
+}
+
+.modal-entry button:active {
+    opacity: 0.5;
+}
+
+/* ================================================================================================ */
+/* ================================================================================================ */
+/* ================================================================================================ */
+
+@media (max-width: 768px) {
+    .modal-inner {
+        width: 90vw;
+        padding: 4rem 1rem;
+    }
+    .modal-title {
+        line-height: 1.25;
+        font-size: 2.2rem;
+    }
+    .modal-entry {
+        column-gap: 1rem;
+    }
+}

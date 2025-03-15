@@ -1,32 +1,38 @@
-import { useState, useEffect } from 'react';
-import './Main.css';
-import './videoPlaybox.css';
+import { useState, useEffect, useContext } from 'react';
+import MyContext from '../context/MyContext';
+import './styles/Main.css';
+import './styles/utilities.css';
 import data from './data';
-import VideoItem from './VideoItem'; // video as a table row (its meta data)
 import VideoBox from './VideoBox'; // video as a video element to click and play
 import { formatDuration } from '../utilities/formatDurationReleased';
-import fetchAllVideos from '../utilities/fetchAllVideos';
-import calcStats from '../utilities/calcStats';
+import Stats from './Stats';
+import Table from './Table';
+import SearchResults from './SearchResults';
+import AboveButtons from './AboveButtons';
+import saveCurrentList from '../utilities/saveCurrentList';
+import handleFetchMore from '../utilities/handleFetchMore';
+import TopButtons from './TopButtons';
 
 // ================================================================================================
 
-function Main({ results, setResults }) {
+function Main() {
+    const { results, setResults } = useContext(MyContext);
+
     const [videoBoxShown, setVideoBoxShown] = useState(false);
     const [videoData, setVideoData] = useState();
     const [shortsVisible, setShortsVisible] = useState(false);
     const [myData, setMyData] = useState(data);
-    const [stats, setStats] = useState('');
     const [statusesRatings, setStatusesRatings] = useState({});
     const [accentColor, setAccentColor] = useState('grey');
+    const [totalVideos, setTotalVideos] = useState(0);
+    const [nextPageToken, setNextPageToken] = useState();
+    const [channelId, setChannelId] = useState();
+    const [isInSaved, setIsInSaved] = useState(false); // is the current video list (some channel's videos; precisely: this channel's id) in Saved or not?
 
-    const handleStatusesRatings = (obj) => {
-        setStatusesRatings((prev) => {
-            localStorage.setItem('videolistUserData', JSON.stringify({ ...prev, ...obj }));
-            return { ...prev, ...obj };
-        });
-    };
+    // =======================================
 
     useEffect(() => {
+        // upon initial load: fetch things from LS
         const fromLS = JSON.parse(localStorage.getItem('videolistUserData')); // fetching statuses and ratings
         const colorFromLS = JSON.parse(localStorage.getItem('videolistAccentColor')); // fetching the interface color
         if (fromLS) setStatusesRatings((prev) => ({ ...prev, ...fromLS }));
@@ -34,29 +40,12 @@ function Main({ results, setResults }) {
     }, []);
 
     useEffect(() => {
+        // set interface accent color
         setTimeout(() => {
             document.documentElement.style.setProperty('--accent', accentColor);
             localStorage.setItem('videolistAccentColor', JSON.stringify(accentColor));
         }, 100);
     }, [accentColor]);
-
-    useEffect(() => {
-        // calc Quick Stats:
-        if (results[0]?.kind === 'youtube#searchResult') return;
-        const [videosNumber, average, totalDurationHours, totalDurationMinutes, howManyWatched, watched] = calcStats(results);
-        setStats(
-            <>
-                <span className="main__stats-all">Videos – {videosNumber}</span> |<span className="main__stats-average">Average video – {average} min</span> |
-                <span className="main__stats-duration">
-                    Total duration – {totalDurationHours} hr {totalDurationMinutes} min
-                </span>{' '}
-                |
-                <span className="main__stats-watched">
-                    Watched – {howManyWatched}/{videosNumber} ({watched}%)
-                </span>
-            </>
-        );
-    }, [results, statusesRatings]);
 
     useEffect(() => {
         // filter out shorts
@@ -72,115 +61,79 @@ function Main({ results, setResults }) {
         }
     }, [shortsVisible]);
 
-    const handleShowingVideo = (index) => {
-        setVideoData(results[index]);
-        setVideoBoxShown(true);
+    useEffect(() => {
+        if (results[0]?.videoUrl) {
+            const fromLS = JSON.parse(localStorage.getItem('videolistSaved'));
+            if (!fromLS) return;
+            const isInSaved = Object.keys(fromLS).includes(channelId);
+            setIsInSaved(isInSaved);
+        }
+    }, [results]);
+
+    // =======================================
+
+    const handleStatusesRatings = (obj) => {
+        setStatusesRatings((prev) => {
+            localStorage.setItem('videolistUserData', JSON.stringify({ ...prev, ...obj }));
+            return { ...prev, ...obj };
+        });
     };
 
-    const toggleShorts = () => {
-        setShortsVisible(!shortsVisible);
-    };
-
-    // checking the input accent color -- returns string (color in rgb)
-    const checkNewColor = (newColor) => {
-        const span = document.createElement('span'); // mimicking DOM addition to get the computed color
-        document.body.appendChild(span);
-        span.style.color = newColor;
-        let color = window.getComputedStyle(span).color;
-        document.body.removeChild(span);
-        const rgbValues = color
-            .slice(4, -1)
-            .split(',')
-            .map((x) => +x.trim()); // just the rgb values (r,g,b)
-        if (rgbValues[0] < 40 && rgbValues[1] < 40 && rgbValues[2] < 40) return `rgb(0, 128, 0)`; // return green if it is too dark
-        return color;
-    };
-
-    const changeColor = () => {
-        const newColor = prompt('Enter your new interface accent color');
-        if (!newColor) return;
-        if (newColor && newColor.trim().length < 3) return;
-        const checkedColor = checkNewColor(newColor);
-        setAccentColor(checkedColor);
-    };
-
-    const videoItems = results.map((x, i) => {
-        return (
-            <VideoItem
-                key={i}
-                data={x}
-                index={i}
-                showVideo={() => handleShowingVideo(i)}
-                shortsAreVisible={shortsVisible}
-                handleStatusesRatings={handleStatusesRatings}
-                statusesRatings={statusesRatings}
-            />
-        );
-    });
+    const toggleShorts = () => setShortsVisible(!shortsVisible);
 
     const searchResultsContent =
-        results && results[0]?.kind === 'youtube#searchResult'
-            ? results.map((x, i) => (
-                  <div key={x.id.channelId} className="result" id={x.id.channelId}>
-                      <div className="result__index">Result {i + 1}</div>
-                      <div className="result__title">
-                          <span>Channel Title:</span>{' '}
-                          <span
-                              onMouseEnter={(e) => e.target.querySelector('img')?.classList.remove('hidden')}
-                              onMouseLeave={(e) => e.target.querySelector('img')?.classList.add('hidden')}
-                              title="Click to view this channel's videos"
-                              onClick={() => fetchAllVideos(x.id.channelId, setResults)}
-                          >
-                              {x.snippet.channelTitle}
-                              <img src={x.snippet.thumbnails.default.url} alt="result thumbnail" className="result__thumb hidden" />
-                          </span>
-                      </div>
-                      <div className="result__description">
-                          <span>Channel Description:</span> {x.snippet.description || '(no description)'}
-                      </div>
-                  </div>
-              ))
-            : '';
-
-    const headers = ['index', 'channel', 'title', 'released', 'duration', 'thumbnail', 'description', 'watch', 'status', 'rating'];
+        results && results[0]?.kind === 'youtube#searchResult' ? (
+            <SearchResults results={results} setResults={setResults} setTotalVideos={setTotalVideos} setChannelId={setChannelId} setNextPageToken={setNextPageToken} />
+        ) : (
+            ''
+        );
 
     const videosContent =
         results && results[0]?.videoUrl ? (
             <>
                 <div className="main__above">
-                    <div className="main__stats">
-                        <span>Quick Stats:</span>
-                        {stats}
-                    </div>
-                    <button title="Add this list of videos to your saved ones for quick access">Save This List</button>
-                    <button onClick={toggleShorts}>{!shortsVisible ? 'Show Shorts' : 'Hide Shorts'}</button>
+                    <Stats results={results} statusesRatings={statusesRatings} totalVideos={totalVideos} />
+                    <AboveButtons
+                        toggleShorts={toggleShorts}
+                        shortsVisible={shortsVisible}
+                        saveCurrentList={() => saveCurrentList(channelId, results)}
+                        isInSaved={isInSaved}
+                    />
                 </div>
-                <table>
-                    <thead>
-                        <tr>
-                            {headers.map((headerName, i) => (
-                                <th key={i}>{headerName}</th>
-                            ))}
-                        </tr>
-                    </thead>
-                    <tbody>{videoItems}</tbody>
-                </table>
+                <Table
+                    results={results}
+                    setVideoData={setVideoData}
+                    setVideoBoxShown={setVideoBoxShown}
+                    shortsVisible={shortsVisible}
+                    handleStatusesRatings={handleStatusesRatings}
+                    statusesRatings={statusesRatings}
+                />
                 <VideoBox isShown={videoBoxShown} data={videoData} setShown={setVideoBoxShown} />
             </>
         ) : (
             ''
         );
 
+    // =======================================
+
     return (
         <main className="main">
             <div className="container-big">
                 <div className="main__inner">
-                    <button title="Change the accent color of the interface" className="main__color-btn" onClick={changeColor}>
-                        Change Color
-                    </button>
+                    <TopButtons setAccentColor={setAccentColor} setResults={setResults} setTotalVideos={setTotalVideos} setNextPageToken={setNextPageToken} />
 
-                    {results && results[0]?.kind === 'youtube#searchResult' && searchResultsContent}
+                    {results && results[0]?.kind === 'youtube#searchResult' && <div className="container">{searchResultsContent}</div>}
                     {results && results[0]?.videoUrl && videosContent}
+
+                    {document.querySelectorAll('.video-item').length < totalVideos && results[0]?.videoUrl && (
+                        <button
+                            className="main__fetch-more"
+                            title="Fetch another batch of videos"
+                            onClick={(e) => handleFetchMore(e, channelId, nextPageToken, setResults, setTotalVideos, setNextPageToken)}
+                        >
+                            Fetch More
+                        </button>
+                    )}
                 </div>
             </div>
         </main>

@@ -1,6 +1,6 @@
 import axios from 'axios';
-import YOUTUBE_API_KEY from '../config';
 import typewriterEffect from './typewriterEffect';
+import YOUTUBE_API_KEY from '../config';
 let timer;
 
 // ================================================================================================
@@ -8,12 +8,7 @@ let timer;
 const searchChannels = async (input, setResults) => {
     if (!input) return;
     try {
-        document.querySelector('.main__inner').insertAdjacentHTML('afterbegin', '<span class="loading" data-list="...">Loading</span>'); // the 'Loading...' element
-        document.querySelector('.loading').style.display = 'block';
-        document.querySelector('.loading').style.marbinBottom = '20px';
-        document.querySelector('.loading').style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();
-        document.querySelector('.loading').style.color = `#000`;
-        document.querySelector('.loading').style.padding = `3px 5px`;
+        document.querySelector('.main__inner').insertAdjacentHTML('afterbegin', '<div class="container"><span class="loading" data-list="...">Loading</span></div>'); // the 'Loading...' element
         typewriterEffect(timer);
 
         const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
@@ -24,11 +19,13 @@ const searchChannels = async (input, setResults) => {
                 key: YOUTUBE_API_KEY,
             },
         });
-        clearInterval(timer);
-        document.querySelector('.loading').remove();
+
+        clearInterval(timer); // clearing and removing "Loading" after fetching is done
+        document.querySelector('.loading').parentElement.remove();
+
         setResults(response.data.items);
     } catch (error) {
-        console.error('Error fetching channels:', error);
+        console.error('💥💥💥 Error fetching channels:', error);
     }
 };
 

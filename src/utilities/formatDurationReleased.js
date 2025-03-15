@@ -1,7 +1,12 @@
 import { differenceInDays, differenceInWeeks, differenceInMonths, differenceInYears } from 'date-fns';
 
+// ================================================================================================
+
 const pad = (value) => value.toString().padStart(2, '0');
 
+// ================================================================================================
+
+// formatting video's duration into readable form
 function formatDuration(durationString) {
     if (!durationString) return;
     const match = durationString.match(/P(?:T)?(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
@@ -11,6 +16,9 @@ function formatDuration(durationString) {
     return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
 }
 
+// ================================================================================================
+
+// helper calc fn, called by formatReleased
 function getReleased(releasedString) {
     const then = new Date(releasedString);
     const day = then.getDate();
@@ -30,9 +38,14 @@ function getReleased(releasedString) {
     return [content, formatted];
 }
 
+// ================================================================================================
+
+// formatting video's 'published at' into readable form
 function formatReleased(releasedString) {
     const [content, formatted] = getReleased(releasedString);
     return <span title={`${content} − ${formatted}`}>{content}</span>;
 }
+
+// ================================================================================================
 
 export { formatDuration, getReleased, formatReleased, pad };

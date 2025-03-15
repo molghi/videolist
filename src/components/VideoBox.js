@@ -1,9 +1,11 @@
+import './styles/videoPlaybox.css';
 import { useState, useRef, useEffect } from 'react';
 
+// ================================================================================================
+
 function VideoBox({ isShown, data, setShown }) {
-    // console.log(JSON.parse(localStorage.getItem('userVideoSettings')));
-    const iframeWidth = '960';
-    const iframeHeight = '540';
+    const iframeWidth = window.innerWidth > 1024 ? '960' : '100%';
+    const iframeHeight = window.innerWidth > 768 ? '540' : '100%';
     const vignetteEl = useRef();
     const noiseEl = useRef();
     const [userVideoSettings, setUserVideoSettings] = useState({
@@ -17,6 +19,8 @@ function VideoBox({ isShown, data, setShown }) {
     const [enlarged, setEnlarged] = useState(false);
     const myIframe = useRef();
     const myWrapper = useRef();
+
+    // =========================================
 
     useEffect(() => {
         const checkFullscreen = () => {
@@ -52,6 +56,8 @@ function VideoBox({ isShown, data, setShown }) {
             localStorage.setItem('userVideoSettings', JSON.stringify({ ...userVideoSettings }));
         }, 500); // small timeout so the first useEffect could do its business else this useEffect operates on unupdated values
     }, [userVideoSettings]);
+
+    // =========================================
 
     if (!data || !isShown) return document.body.classList.remove('o-h'); // remove overflow hidden
     document.body.classList.add('o-h');
@@ -102,6 +108,8 @@ function VideoBox({ isShown, data, setShown }) {
             return !prev;
         });
     };
+
+    // =========================================
 
     // setting content
     const content = (

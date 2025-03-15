@@ -1,9 +1,3 @@
-.video-item {
-}
-
-.video-item__index {
-}
-
 .video-item__channel {
     font-size: 1.4rem;
 }
@@ -15,11 +9,13 @@
 .video-item__released {
     font-size: 1.4rem;
     text-align: center;
+    white-space: nowrap;
 }
 
 .video-item__duration {
     font-size: 1.4rem;
     text-align: center;
+    white-space: nowrap;
 }
 
 .video-item__thumbnail {
@@ -41,9 +37,11 @@
 
 .video-item__rating {
     text-align: center;
+    white-space: nowrap;
 }
 
 td.video-item__status {
     padding: 0 1rem;
     text-align: center;
+    white-space: nowrap;
 }

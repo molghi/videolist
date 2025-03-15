@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
-import './VideoItem.css';
+import './styles/VideoItem.css';
 import { formatDuration, getReleased, formatReleased, pad } from '../utilities/formatDurationReleased';
+
+// ================================================================================================
 
 function VideoItem({ data, index, showVideo, shortsAreVisible, handleStatusesRatings, statusesRatings }) {
     const [thumb, setThumb] = useState('');
