@@ -1,37 +1,41 @@
 import './styles/AboveButtons.css';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useContext } from 'react';
+import MyContext from '../context/MyContext';
+import saveCurrentList from '../utilities/saveCurrentList';
 
 // ================================================================================================
 
-function AboveButtons({ toggleShorts, shortsVisible, saveCurrentList, isInSaved }) {
-    const [saveBtn, setSaveBtn] = useState('Save List');
-    const [title, setTitle] = useState('Add this video list to your saved ones for quick access');
+// renders 'Save List' and 'Show Shorts' buttons of a particular video list
+function AboveButtons() {
+    const { toggleShorts, shortsVisible, isInSaved, channelId, results } = useContext(MyContext);
+    const [saveBtn, setSaveBtn] = useState('Save List'); // setting btn text
+    const [title, setTitle] = useState('Add this video list to your saved ones for quick access'); // setting btn title
     const mySaveBtn = useRef();
 
+    // happens only upon initial loadup
     useEffect(() => {
-        setTimeout(() => {
-            if (isInSaved) {
-                setSaveBtn('List Saved');
-                mySaveBtn.current.disabled = true;
-                mySaveBtn.current.classList.add('disabled');
-                setTitle('This list is already in your Saved');
-            }
-            if (saveBtn === 'List Saved') {
-                setTitle('This list is already in your Saved');
-            }
-        }, 100);
-    }, []);
+        if (isInSaved) {
+            setSaveBtn('List Saved'); // if this list is in Saved, updating btn text
+            mySaveBtn.current.disabled = true; // disabling that btn
+            mySaveBtn.current.classList.add('disabled'); // adding disabled class
+            setTitle('This list is already in your Saved'); // changing btn title
+        }
+        if (saveBtn === 'List Saved') {
+            setTitle('This list is already in your Saved');
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isInSaved]);
 
-    const handleSave = () => {
-        saveCurrentList();
-        setSaveBtn('List Saved');
-        mySaveBtn.current.disabled = true;
-        mySaveBtn.current.classList.add('disabled');
+    const handleSaveClick = () => {
+        saveCurrentList(channelId, results); // pushing this videolist to LS to quickly access it later
+        setSaveBtn('List Saved'); // updating btn text
+        mySaveBtn.current.disabled = true; // disabling that btn
+        mySaveBtn.current.classList.add('disabled'); // adding disabled class
     };
 
     return (
         <div className="above-buttons">
-            <button onClick={handleSave} ref={mySaveBtn} title={title}>
+            <button onClick={handleSaveClick} ref={mySaveBtn} title={title}>
                 {saveBtn}
             </button>
             <button onClick={toggleShorts}>{!shortsVisible ? 'Show Shorts' : 'Hide Shorts'}</button>

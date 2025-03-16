@@ -1,17 +1,13 @@
+import { useContext } from 'react';
+import MyContext from '../context/MyContext';
 import './styles/Table.css';
 import VideoItem from './VideoItem';
 
 // ================================================================================================
 
-function Table({ results, setVideoData, setVideoBoxShown, shortsVisible, handleStatusesRatings, statusesRatings }) {
-    const headers = ['index', 'channel', 'title', 'released', 'duration', 'thumbnail', 'description', 'watch', 'status', 'rating'];
-
-    const handleShowingVideo = (index) => {
-        setVideoData(results[index]);
-        setVideoBoxShown(true);
-    };
-
-    // ========================================
+function Table() {
+    const { results } = useContext(MyContext);
+    const headers = ['index', 'channel', 'title', 'released', 'duration', 'thumbnail', 'description', 'watch', 'status', 'rating']; // table header names
 
     return (
         <div className="table-wrapper">
@@ -24,19 +20,9 @@ function Table({ results, setVideoData, setVideoBoxShown, shortsVisible, handleS
                     </tr>
                 </thead>
                 <tbody>
-                    {results.map((result, i) => {
-                        return (
-                            <VideoItem
-                                key={i}
-                                data={result}
-                                index={i}
-                                showVideo={() => handleShowingVideo(i)}
-                                shortsAreVisible={shortsVisible}
-                                handleStatusesRatings={handleStatusesRatings}
-                                statusesRatings={statusesRatings}
-                            />
-                        );
-                    })}
+                    {results.map((result, i) => (
+                        <VideoItem key={i} index={i} data={result} />
+                    ))}
                 </tbody>
             </table>
         </div>

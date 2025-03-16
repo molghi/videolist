@@ -1,6 +1,8 @@
 import './styles/Header.css';
 import Search from './Search';
 
+// ================================================================================================
+
 function Header() {
     return (
         <header className="header">
@@ -22,5 +24,7 @@ function Header() {
         </header>
     );
 }
+
+// ================================================================================================
 
 export default Header;

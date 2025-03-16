@@ -42,7 +42,9 @@ function getReleased(releasedString) {
 
 // formatting video's 'published at' into readable form
 function formatReleased(releasedString) {
-    const [content, formatted] = getReleased(releasedString);
+    let [content, formatted] = getReleased(releasedString);
+    if (content === '0 days ago') content = 'Today';
+    if (content === '1 day ago') content = 'Yesterday';
     return <span title={`${content} − ${formatted}`}>{content}</span>;
 }
 

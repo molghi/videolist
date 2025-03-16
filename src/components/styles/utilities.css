@@ -25,7 +25,7 @@
 }
 
 .btn-vid-enlarged {
-    opacity: 0.5 !important;
+    opacity: 0.1 !important;
     z-index: 100 !important;
     filter: grayscale(100%);
 }

@@ -1,12 +1,14 @@
 import axios from 'axios';
 import typewriterEffect from './typewriterEffect';
-import YOUTUBE_API_KEY from '../config';
+import { formatDuration } from './formatDurationReleased';
+// import YOUTUBE_API_KEY from '../config';
+const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 let timer;
 let data = [];
 
 // ================================================================================================
 
-async function fetchVideos(channelId, nextPageToken = '', setResults, setTotalVideos, setNextPageToken) {
+async function fetchVideos(channelId, nextPageToken = '', setResults, setTotalVideos, setNextPageToken, setResultsUnfiltered, shortsVisible = true) {
     if (document.querySelector('.loading')) document.querySelector('.loading').parentElement.remove();
     document.querySelector('.main__inner').insertAdjacentHTML('afterbegin', '<div class="container"><span class="loading" data-list="...">Loading</span></div>'); // the 'Loading...' element
     typewriterEffect(timer);
@@ -39,7 +41,15 @@ async function fetchVideos(channelId, nextPageToken = '', setResults, setTotalVi
     clearInterval(timer); // when done, clearing and removing 'Loading'
     document.querySelector('.loading')?.parentElement.remove();
 
-    setResults(data.flat());
+    if (shortsVisible) setResults(data.flat());
+    else
+        setResults(
+            data.flat().filter((entry) => {
+                const duration = formatDuration(entry.duration);
+                return duration.split(':')[1] > 1;
+            })
+        ); // if shorts are invisible/hidden, filter them out
+    setResultsUnfiltered(data.flat());
 }
 
 // ================================================================================================

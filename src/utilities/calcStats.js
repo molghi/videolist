@@ -14,6 +14,7 @@ const calcStats = (data) => {
                 if (i === 0) return +x * 60 * 60 + a;
                 if (i === 1) return +x * 60 + a;
                 if (i === 2) return +x + a;
+                return a;
             }, 0)
         );
 
