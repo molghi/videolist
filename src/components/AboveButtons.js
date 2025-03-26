@@ -7,7 +7,7 @@ import saveCurrentList from '../utilities/saveCurrentList';
 
 // renders 'Save List' and 'Show Shorts' buttons of a particular video list
 function AboveButtons() {
-    const { toggleShorts, shortsVisible, isInSaved, channelId, results } = useContext(MyContext);
+    const { toggleShorts, shortsVisible, isInSaved, channelId, results, setSavedChannels } = useContext(MyContext);
     const [saveBtn, setSaveBtn] = useState('Save List'); // setting btn text
     const [title, setTitle] = useState('Add this video list to your saved ones for quick access'); // setting btn title
     const mySaveBtn = useRef();
@@ -29,6 +29,10 @@ function AboveButtons() {
     const handleSaveClick = () => {
         saveCurrentList(channelId, results); // pushing this videolist to LS to quickly access it later
         setSaveBtn('List Saved'); // updating btn text
+        setSavedChannels((prev) => {
+            if (!prev.map((x) => x[0]).includes(channelId)) return [...prev, [channelId, results[0].channelTitle]];
+            else return prev;
+        });
         mySaveBtn.current.disabled = true; // disabling that btn
         mySaveBtn.current.classList.add('disabled'); // adding disabled class
     };

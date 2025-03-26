@@ -74,6 +74,20 @@
     column-gap: 2rem;
 }
 
+.modal-entry button {
+    white-space: nowrap;
+}
+
+.modal-entry button:nth-child(2) {
+    max-width: 505px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal-entry button:last-child {
+    margin-left: auto;
+}
+
 .modal-entry + .modal-entry {
     margin-top: 2rem;
 }

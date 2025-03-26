@@ -6,6 +6,20 @@
     font-size: 1.4rem;
 }
 
+.video-item__channel button {
+    text-align: left;
+    text-decoration: underline;
+    border-bottom: none;
+}
+
+.video-item__channel button:hover {
+    text-decoration: none;
+}
+
+.video-item__channel button:active {
+    opacity: 0.5;
+}
+
 .video-item__released {
     font-size: 1.4rem;
     text-align: center;

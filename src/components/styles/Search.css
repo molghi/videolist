@@ -5,6 +5,7 @@
     column-gap: 1rem;
     transform: translateY(2px);
     font-size: 1.4rem;
+    position: relative;
 }
 
 .search input {
@@ -19,6 +20,22 @@
 
 .search button:hover {
     text-decoration: none;
+}
+
+.search-switch {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    display: flex;
+    column-gap: 2rem;
+}
+
+.search-switch label {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 /* ================================================================================================ */

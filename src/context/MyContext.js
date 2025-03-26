@@ -25,6 +25,10 @@ function Provider({ children }) {
         noise: false,
     });
     const [enlarged, setEnlarged] = useState(false);
+    // const [savedChannels, setSavedChannels] = useState({});
+    const [savedChannels, setSavedChannels] = useState([]);
+    const [searchType, setSearchType] = useState('channels');
+    const [searchQuery, setSearchQuery] = useState();
     const iframeWidth = window.innerWidth > 1024 ? '960' : '100%';
     const iframeHeight = window.innerWidth > 768 ? '540' : '100%';
 
@@ -45,6 +49,7 @@ function Provider({ children }) {
     const handleShowingVideo = (data) => {
         // runs upon clicking Play btn (of VideoItem)
         // setVideoData(results[data]);
+        console.log(data);
         setVideoData(data);
         setVideoBoxShown(true);
     };
@@ -130,6 +135,12 @@ function Provider({ children }) {
         setUserVideoSettings,
         enlarged,
         setEnlarged,
+        savedChannels,
+        setSavedChannels,
+        searchType,
+        setSearchType,
+        searchQuery,
+        setSearchQuery,
     };
 
     return <MyContext.Provider value={toExport}>{children}</MyContext.Provider>;

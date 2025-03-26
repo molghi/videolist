@@ -146,6 +146,9 @@ input[type='radio']:checked ~ label.radio-choice {
     width: 400px;
     background-color: #000;
     min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .thumbnail img {

@@ -7,6 +7,7 @@ import { formatDuration } from '../utilities/formatDurationReleased';
 import Stats from './Stats';
 import Table from './Table';
 import SearchResults from './SearchResults';
+import SearchVideoResults from './SearchVideoResults';
 import AboveButtons from './AboveButtons';
 import handleFetchMore from '../utilities/handleFetchMore';
 import TopButtons from './TopButtons';
@@ -29,6 +30,10 @@ function Main() {
         setAccentColor,
         setIsInSaved,
         shortsVisible,
+        savedChannels,
+        setSavedChannels,
+        searchType,
+        searchQuery,
     } = useContext(MyContext); // pulling from context
 
     // =======================================
@@ -41,7 +46,9 @@ function Main() {
         const colorFromLS = JSON.parse(localStorage.getItem('videolistAccentColor')); // fetching the interface color
         if (fromLS) setStatusesRatings((prev) => ({ ...prev, ...fromLS })); // conditionally setting statuses and ratings
         if (colorFromLS) setAccentColor(colorFromLS); // conditionally setting the interface color
-    }, [setAccentColor, setStatusesRatings]);
+        const savedChannelsFromLS = localStorage.getItem('videolistSaved') ? JSON.parse(localStorage.getItem('videolistSaved')) : null;
+        if (savedChannelsFromLS) setSavedChannels((prev) => [...prev, ...savedChannelsFromLS]);
+    }, [setAccentColor, setStatusesRatings, setSavedChannels]);
 
     useEffect(() => {
         // upon change of 'accentColor': set interface accent color and push to LS
@@ -67,28 +74,40 @@ function Main() {
     }, [shortsVisible]);
 
     useEffect(() => {
+        console.log(results);
         // upon change of 'results': if results are not search results but some channel's videos, figure out if this channel was previously saved to Saved
         if (results && results.length > 0 && results[0]?.videoUrl) {
             const fromLS = JSON.parse(localStorage.getItem('videolistSaved'));
             if (!fromLS) return;
-            const inSaved = Object.keys(fromLS).includes(channelId);
+            setSavedChannels((prev) => [...fromLS]);
+            const inSaved = savedChannels.map((x) => x[0]).includes(channelId);
             setIsInSaved(inSaved);
+            if (searchType === 'channels') document.title = `Videolist \u2014 ${results[0].channelTitle}`;
         }
-    }, [results, channelId, setIsInSaved]);
+        if (results && results.length > 0 && results[0]?.kind === 'youtube#searchResultVideo' && searchType === 'videos' && searchQuery)
+            document.title = `Videolist \u2014 ${searchQuery.trim()}`;
+        if (results && results.length > 0 && results[0]?.kind === 'youtube#searchResult' && searchType === 'channels' && searchQuery)
+            document.title = `Videolist \u2014 ${searchQuery.trim()}`;
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [results, channelId, setIsInSaved, setSavedChannels, searchQuery, searchType]);
 
     // =======================================
 
     // THINGS TO RENDER:
 
-    const searchResultsContent = results && results[0]?.kind === 'youtube#searchResult' ? <SearchResults /> : '';
+    const searchResultsContent = results && results[0]?.kind === 'youtube#searchResult' ? <SearchResults /> : ''; // when searchign channels
+
+    const searchVideoResultsContent = results && results[0]?.kind === 'youtube#searchResultVideo' ? <SearchVideoResults /> : ''; // when searching videos
 
     const videosContent =
         results && results[0]?.videoUrl ? (
             <>
-                <div className="main__above">
-                    <Stats />
-                    <AboveButtons />
-                </div>
+                {searchType !== 'videos' && (
+                    <div className="main__above">
+                        <Stats />
+                        <AboveButtons />
+                    </div>
+                )}
                 <Table />
                 <VideoBox />
             </>
@@ -100,7 +119,7 @@ function Main() {
         <button
             className="main__fetch-more"
             title="Fetch another batch of videos"
-            onClick={(e) => handleFetchMore(e, channelId, nextPageToken, setResults, setTotalVideos, setNextPageToken, setResultsUnfiltered, shortsVisible)}
+            onClick={(e) => handleFetchMore(e, channelId, nextPageToken, setResults, setTotalVideos, setNextPageToken, setResultsUnfiltered, shortsVisible, results)}
         >
             Fetch More
         </button>
@@ -117,9 +136,10 @@ function Main() {
                     <TopButtons />
 
                     {results && results[0]?.kind === 'youtube#searchResult' && <div className="container">{searchResultsContent}</div>}
+                    {results && results[0]?.kind === 'youtube#searchResultVideo' && <div className="container">{searchVideoResultsContent}</div>}
                     {results && results[0]?.videoUrl && videosContent}
 
-                    {document.querySelectorAll('.video-item').length < totalVideos && results[0]?.videoUrl && fetchMoreBtn}
+                    {document.querySelectorAll('.video-item').length < totalVideos && results[0]?.videoUrl && searchType !== 'videos' && fetchMoreBtn}
                 </div>
             </div>
         </main>

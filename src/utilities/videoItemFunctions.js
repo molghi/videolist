@@ -20,10 +20,14 @@ const closeThumb = (setThumb) => setThumb('');
 // ================================================================================================
 
 // show thumbnail
-const showThumb = (setThumb, data) => {
+const showThumb = (setThumb, data, searchType) => {
     setThumb(
         <span className="thumbnail">
-            <img src={data.thumbnail} alt="video thumbnail" title={data.title} />
+            <img
+                src={searchType === 'channels' ? data.thumbnail : data.snippet.thumbnails.medium.url}
+                alt="video thumbnail"
+                title={searchType === 'channels' ? data.title : data.snippet.title}
+            />
             <button onClick={() => closeThumb(setThumb)} className="thumbnail__close">
                 close
             </button>
@@ -39,19 +43,21 @@ const closeDescription = (setDescription) => setDescription('');
 // ================================================================================================
 
 // show description
-const showDescription = (setDescription, data) => {
+const showDescription = (setDescription, data, searchType) => {
+    const released = searchType === 'channels' ? getReleased(data.publishedAt) : getReleased(data.snippet.publishedAt);
+    const description = searchType === 'channels' ? data.description : data.snippet.description;
     setDescription(
         <span className="description">
-            <span className="italic">Video title: {data.title}</span>
+            <span className="italic">Video title: {searchType === 'channels' ? data.title : data.snippet.title}</span>
             <br />
             <span className="italic">
-                Released: {getReleased(data.publishedAt)[0]} − {getReleased(data.publishedAt)[1]}
+                Released: {released[0]} − {released[1]}
             </span>
             <br />
-            <span className="italic">Channel: {data.channelTitle}</span>
+            <span className="italic">Channel: {searchType === 'channels' ? data.channelTitle : data.snippet.channelTitle}</span>
             <br />
             <br />
-            <span>{data.description || '(no description)'}</span>
+            <span>{description || '(no description)'}</span>
             <button onClick={() => closeDescription(setDescription)} className="description__close">
                 close
             </button>
@@ -62,9 +68,7 @@ const showDescription = (setDescription, data) => {
 // ================================================================================================
 
 // happens upon clicking Play btn
-const handleVideo = (handleShowingVideo, data) => {
-    handleShowingVideo(data);
-};
+const handleVideo = (handleShowingVideo, data) => handleShowingVideo(data);
 
 // ================================================================================================
 

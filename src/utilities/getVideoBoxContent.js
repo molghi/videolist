@@ -28,20 +28,22 @@ function getVideoBoxContent(
             <div className="video-playbox__video-place">The video will be here...</div>
 
             <div className="video-playbox__frame-box">
-                <iframe
-                    width={iframeWidth}
-                    height={iframeHeight}
-                    src={url}
-                    title={videoData.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                    ref={myIframe}
-                    style={{
-                        filter: `brightness(${userVideoSettings.brightness}%) contrast(${userVideoSettings.contrast}%) grayscale(${userVideoSettings.grayscale}%) sepia(${userVideoSettings.sepia}%)`,
-                    }}
-                ></iframe>
+                <div id="my-player-container">
+                    <iframe
+                        width={iframeWidth}
+                        height={iframeHeight}
+                        src={url}
+                        title={videoData.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
+                        ref={myIframe}
+                        style={{
+                            filter: `brightness(${userVideoSettings.brightness}%) contrast(${userVideoSettings.contrast}%) grayscale(${userVideoSettings.grayscale}%) sepia(${userVideoSettings.sepia}%)`,
+                        }}
+                    ></iframe>
+                </div>
 
                 <div ref={vignetteEl} className={`video-playbox__vignette ${userVideoSettings.vignette === false ? 'hidden' : ''}`}></div>
                 <div ref={noiseEl} className={`video-playbox__noise ${userVideoSettings.noise === false ? 'hidden' : ''}`}></div>

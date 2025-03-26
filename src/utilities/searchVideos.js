@@ -6,34 +6,35 @@ let timer;
 
 // ================================================================================================
 
-const searchChannels = async (input, setResults) => {
-    if (!input.trim()) return;
+async function searchVideos(searchTerm, setResults) {
+    if (!searchTerm.trim()) return;
     try {
         document.querySelector('.main__inner').insertAdjacentHTML('afterbegin', '<div class="container"><span class="loading" data-list="...">Loading</span></div>'); // the 'Loading...' element
         typewriterEffect(timer);
 
-        // console.log(`Fetching...`);
-
         const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
             params: {
                 part: 'snippet',
-                type: 'channel',
-                q: input,
+                type: 'video',
+                q: searchTerm,
                 key: YOUTUBE_API_KEY,
+                maxResults: 50,
+                order: 'relevance',
             },
         });
-
-        // console.log(`Fetching completed. Response status: ${response.status}`);
 
         clearInterval(timer); // clearing and removing "Loading" after fetching is done
         document.querySelector('.loading').parentElement.remove();
 
-        setResults(response.data.items);
+        setResults(
+            response.data.items.map((result) => {
+                result.kind += 'Video';
+                return result;
+            })
+        );
     } catch (error) {
-        console.error('💥💥💥 Error fetching channels:', error);
+        console.error('💥💥💥 Error fetching videos:', error);
     }
-};
+}
 
-// ================================================================================================
-
-export default searchChannels;
+export default searchVideos;

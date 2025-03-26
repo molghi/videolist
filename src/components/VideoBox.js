@@ -18,6 +18,7 @@ function VideoBox() {
         videoBoxShown,
         videoData,
         setVideoBoxShown,
+        searchType,
     } = useContext(MyContext);
 
     const vignetteEl = useRef();
@@ -26,6 +27,38 @@ function VideoBox() {
     const myWrapper = useRef();
 
     // =======================================
+
+    // useEffect(() => {
+    //     const playerHandler = () => {
+    //         console.log(document.querySelector('iframe'));
+    //         if (document.getElementById('my-player-container')) {
+    //             console.log(3);
+    //             new window.YT.Player('my-player-container', {
+    //                 videoId: videoData.videoUrl.slice(videoData.videoUrl.indexOf('?v=') + 3),
+    //                 events: {
+    //                     onReady: (event) => {
+    //                         event.target.setVolume(50);
+    //                         event.target.setPlaybackQuality('medium');
+    //                     },
+    //                 },
+    //             });
+    //         }
+    //     };
+    //     if (!window.YT) {
+    //         const script = document.createElement('script');
+    //         script.src = 'https://www.youtube.com/iframe_api';
+    //         script.async = true;
+    //         document.body.appendChild(script);
+
+    //         script.onload = () => {
+    //             console.log('API loaded');
+    //             console.log(window.YT);
+    //             playerHandler();
+    //         };
+    //     } else {
+    //         playerHandler();
+    //     }
+    // }, [videoBoxShown]);
 
     useEffect(() => {
         // only upon first render (page refresh): fetch state from LS (iframe video effects) and set it
@@ -48,9 +81,9 @@ function VideoBox() {
 
     if (!videoData || !videoBoxShown) return document.body.classList.remove('o-h'); // remove overflow hidden and return
     document.body.classList.add('o-h'); // add overflow hidden if this videobox is shown (no scrolling)
-
     const filters = ['brightness', 'contrast', 'grayscale', 'sepia']; // filter/effects names
-    const url = `https://www.youtube.com/embed/${videoData.videoUrl.slice(videoData.videoUrl.indexOf('?v=') + 3)}`; // getting url for iframe
+    const myId = searchType === 'channels' ? videoData.videoUrl.slice(videoData.videoUrl.indexOf('?v=') + 3) : videoData.id.videoId;
+    const url = `https://www.youtube.com/embed/${myId}`; // getting url for iframe
 
     const content = getVideoBoxContent(
         myWrapper,

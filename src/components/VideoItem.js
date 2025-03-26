@@ -7,7 +7,19 @@ import getVideoItemContent from '../utilities/getVideoItemContent';
 // ================================================================================================
 
 function VideoItem({ data, index }) {
-    const { shortsVisible, handleStatusesRatings, statusesRatings, handleShowingVideo } = useContext(MyContext);
+    const {
+        shortsVisible,
+        handleStatusesRatings,
+        statusesRatings,
+        handleShowingVideo,
+        searchType,
+        setSearchType,
+        setResults,
+        setTotalVideos,
+        setNextPageToken,
+        setResultsUnfiltered,
+        setChannelId,
+    } = useContext(MyContext);
     const [thumb, setThumb] = useState(''); // thumbnail's jsx
     const [description, setDescription] = useState(''); // description's jsx
     const [, setStatusRating] = useState({
@@ -15,13 +27,20 @@ function VideoItem({ data, index }) {
         rating: 'unset',
     });
 
-    const videoId = data.videoUrl.split('?v=')[1]; // getting video id to render iframe on click
+    let videoId;
+    // console.log(data);
+    const isChannelAllVideosItem = Boolean(data.duration);
+    const isSearchVideoResult = data.kind === 'youtube#searchResultVideo';
+    if (searchType === 'channels' && isChannelAllVideosItem) videoId = data.videoUrl.split('?v=')[1]; // getting video id to render iframe on click
+    if (searchType === 'videos' && isSearchVideoResult) videoId = data.id.videoId;
 
     // happens upon change of 'statusesRatings' -- updating status and rating of this video item
     useEffect(() => {
         if (!statusesRatings[videoId]) return;
         setStatusRating((prev) => ({ ...prev, ...statusesRatings[videoId] }));
     }, [statusesRatings, videoId]);
+
+    if (searchType === 'videos' && !isSearchVideoResult) return console.log(`early return`);
 
     const itemDuration = formatDuration(data.duration); // getting the duration of this video item
 
@@ -37,7 +56,14 @@ function VideoItem({ data, index }) {
         statusesRatings,
         videoId,
         setStatusRating,
-        handleStatusesRatings
+        handleStatusesRatings,
+        searchType,
+        setResults,
+        setTotalVideos,
+        setNextPageToken,
+        setResultsUnfiltered,
+        setSearchType,
+        setChannelId
     ); // getting one <tr></tr>
 
     let toShow = '';

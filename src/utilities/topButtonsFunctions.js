@@ -3,45 +3,55 @@ import fetchVideos from '../utilities/fetchVideos';
 // ================================================================================================
 
 // general function in this file -- happens upon clicking on 'View Saved' -- it renders a modal window
-const viewSavedLists = (setShowModal, setModal, setResults, setTotalVideos, setNextPageToken, myWindow, setResultsUnfiltered, setChannelId) => {
-    const fromLS = JSON.parse(localStorage.getItem('videolistSaved'));
+// const viewSavedLists = (
+//     setShowModal,
+//     setModal,
+//     setResults,
+//     setTotalVideos,
+//     setNextPageToken,
+//     myWindow,
+//     setResultsUnfiltered,
+//     setChannelId,
+//     savedChannels,
+//     setSavedChannels
+// ) => {
+//     setShowModal(true); // modal is shown
 
-    setShowModal(true); // modal is shown
-
-    // setting modal's jsx
-    setModal(
-        <>
-            <div onClick={(e) => handleOutsideClick(e, myWindow, closeModal, setShowModal)} className="modal-box">
-                <div ref={myWindow} className="modal-inner">
-                    <button onClick={() => closeModal(setShowModal)} className="modal-close">
-                        close
-                    </button>
-                    <div className="modal-title">Your Saved Video Lists</div>
-                    <div className="modal-entries">
-                        {fromLS ? (
-                            Object.entries(fromLS).map((entry, i) => (
-                                <div key={entry[0]} className="modal-entry">
-                                    <span>{i + 1}.</span>
-                                    <button
-                                        onClick={(e) =>
-                                            performFetching(e, setShowModal, setResults, setTotalVideos, setNextPageToken, setResultsUnfiltered, setChannelId)
-                                        }
-                                        title="Click to show the videos from this channel"
-                                        id={entry[0]}
-                                    >
-                                        {entry[1]}
-                                    </button>
-                                </div>
-                            ))
-                        ) : (
-                            <i>Nothing here yet...</i>
-                        )}
-                    </div>
-                </div>
-            </div>
-        </>
-    );
-};
+//     // setting modal's jsx
+//     setModal(
+//         <>
+//             <div onClick={(e) => handleOutsideClick(e, myWindow, closeModal, setShowModal)} className="modal-box">
+//                 <div ref={myWindow} className="modal-inner">
+//                     <button onClick={() => closeModal(setShowModal)} className="modal-close">
+//                         close
+//                     </button>
+//                     <div className="modal-title">Your Saved Video Lists</div>
+//                     <div className="modal-entries">
+//                         {savedChannels ? (
+//                             savedChannels.map((entry, i) => (
+//                                 <div key={entry[0]} className="modal-entry">
+//                                     <span>{i + 1}.</span>
+//                                     <button
+//                                         onClick={(e) =>
+//                                             performFetching(e, setShowModal, setResults, setTotalVideos, setNextPageToken, setResultsUnfiltered, setChannelId)
+//                                         }
+//                                         title="Click to show the videos from this channel"
+//                                         id={entry[0]}
+//                                     >
+//                                         {entry[1]}
+//                                     </button>
+//                                     <button onClick={(e) => removeFromSaved(e, setSavedChannels)}>remove</button>
+//                                 </div>
+//                             ))
+//                         ) : (
+//                             <i>Nothing here yet...</i>
+//                         )}
+//                     </div>
+//                 </div>
+//             </div>
+//         </>
+//     );
+// };
 
 // ================================================================================================
 
@@ -67,4 +77,4 @@ const closeModal = (setShowModal) => setShowModal(false);
 
 // ================================================================================================
 
-export { viewSavedLists, handleOutsideClick, performFetching, closeModal };
+export { handleOutsideClick, performFetching, closeModal };

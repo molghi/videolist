@@ -6,19 +6,26 @@ import VideoItem from './VideoItem';
 // ================================================================================================
 
 function Table() {
-    const { results } = useContext(MyContext);
-    const headers = ['index', 'channel', 'title', 'released', 'duration', 'thumbnail', 'description', 'watch', 'status', 'rating']; // table header names
+    const { results, searchType } = useContext(MyContext);
+    let headers = ['index', 'channel', 'title', 'released', 'duration', 'thumbnail', 'description', 'watch', 'status', 'rating']; // table header names
+    if (searchType === 'videos') headers = ['index', 'channel', 'title', 'released', 'thumbnail', 'description', 'watch'];
+
+    const hasDuration = Boolean(results[0].duration);
 
     return (
         <div className="table-wrapper">
             <table>
-                <thead>
-                    <tr>
-                        {headers.map((headerName, i) => (
-                            <th key={i}>{headerName}</th>
-                        ))}
-                    </tr>
-                </thead>
+                {searchType === 'videos' && hasDuration ? (
+                    ''
+                ) : (
+                    <thead>
+                        <tr>
+                            {headers.map((headerName, i) => (
+                                <th key={i}>{headerName}</th>
+                            ))}
+                        </tr>
+                    </thead>
+                )}
                 <tbody>
                     {results.map((result, i) => (
                         <VideoItem key={i} index={i} data={result} />
