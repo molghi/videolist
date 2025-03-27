@@ -74,7 +74,6 @@ function Main() {
     }, [shortsVisible]);
 
     useEffect(() => {
-        console.log(results);
         // upon change of 'results': if results are not search results but some channel's videos, figure out if this channel was previously saved to Saved
         if (results && results.length > 0 && results[0]?.videoUrl) {
             const fromLS = JSON.parse(localStorage.getItem('videolistSaved'));

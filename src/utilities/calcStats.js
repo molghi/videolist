@@ -8,7 +8,10 @@ const calcStats = (data) => {
     const videosNumber = data.length;
 
     const durationsInSeconds = data
-        .map((entry) => formatDuration(entry.duration).split(':'))
+        .map((entry) => {
+            if (entry.duration) return formatDuration(entry.duration).split(':');
+            else return ['00', '00', '00']; // if duration is undefined, return all zeroes for H, M and S
+        })
         .map((x) =>
             x.reduce((a, x, i) => {
                 if (i === 0) return +x * 60 * 60 + a;

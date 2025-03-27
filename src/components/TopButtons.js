@@ -29,8 +29,6 @@ function TopButtons() {
         });
     };
 
-    // console.log(savedChannels);
-
     useEffect(() => {
         // setting modal's jsx:
         setModal(

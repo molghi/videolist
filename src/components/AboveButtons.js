@@ -5,7 +5,7 @@ import saveCurrentList from '../utilities/saveCurrentList';
 
 // ================================================================================================
 
-// renders 'Save List' and 'Show Shorts' buttons of a particular video list
+// this function component renders 'Save List' and 'Hide Shorts' buttons of a particular video list
 function AboveButtons() {
     const { toggleShorts, shortsVisible, isInSaved, channelId, results, setSavedChannels } = useContext(MyContext);
     const [saveBtn, setSaveBtn] = useState('Save List'); // setting btn text
@@ -22,6 +22,12 @@ function AboveButtons() {
         }
         if (saveBtn === 'List Saved') {
             setTitle('This list is already in your Saved');
+        }
+        if (!isInSaved) {
+            setSaveBtn('Save List');
+            mySaveBtn.current.disabled = false;
+            mySaveBtn.current.classList.remove('disabled');
+            setTitle('Add this video list to your saved ones for quick access');
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isInSaved]);
